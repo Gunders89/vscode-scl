@@ -10,6 +10,11 @@
     "categories": [
         "Languages"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Gunders89/vscode-scl.git"
+    },
+    "homepage": "https://github.com/Gunders89/vscode-scl/blob/master/README.md",
     "contributes": {
         "languages": [{
             "id": "siemensscl",
