@@ -2,27 +2,235 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Siemens SCL",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+		{ "include": "#comments"},
+		{ "include": "#keywords" },
+		{ "include": "#strings" },
+		{ "include": "#operators" },
+		{ "include": "#storage"	},
+		{ "include": "#support"	},
+		{ "include": "#constants" },
+		{ "include": "#punctuations" }
+
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.Siemens SCL",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.scl",
+					"match": "(?i)\\b(break|case|end_case|continue|do|to|else|elsif|AT|for|end_for|goto|if|end_if|return|of|while|end_while|then|repeat|until|end_repeat|exit|label|end_label)\\b"
+				},
+				{
+					"name": "keyword.control.scl",
+					"match": "(?i)\\b(var|var_input|var_output|var_in_out|var_temp|end_var|begin|const|end_const|type|end_type)\\b"			
+				},
+				{
+					"name": "keyword.control.scl",
+					"match": "(?i)\\b(mod|div)\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.control.scl",
+					"match": "!|\\$|\\&|<\\=|>\\=|<>|<|>|(\\*\\*)|(\\=\\=)|!|\\&\\&|\\*|\\/|\\-|\\+|:|\\=|\\b(void)\\b"
+				},
+				{
+					"name": "keyword.control.assignment.scl",
+					"match": "\\:\\="
+				},
+				{
+					"name": "keyword.control.scl",
+					"match": "(?i)\\b(and|or|xor|not)\\b"
+				}
+			]
+
+		},
+				
+		"storage": {
+			"patterns": [
+				{
+					"captures": {
+						"1": { "name": "storage.type.function.scl"},
+						"2": { "name": "entity.name.function.scl"},
+						"3": { "name": "entity.name.function.scl"},
+						"7": { 
+							"patterns": [
+								{
+									"include": "#operators"
+								}
+							]
+						},
+						"9": { 	
+							"patterns": [
+								{
+									"include": "#support"
+								}
+							]
+						}
+					},
+					"match": "(?i)\\b(function)\\s+(\"(\\w*)\")((|\\s*)((\\:)(\\s*|)(\\w*)(\\s))|)",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"match": "(?i)\\b(END_FUNCTION)\\b",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"captures": {
+						"1": { "name": "storage.type.function.scl"},
+						"2": { "name": "entity.name.function.scl"},
+						"3": { "name": "entity.name.function.scl"}
+					},
+					"match": "(?i)\\b(function_block)\\s+(\"(\\w*)\")?",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"match": "(?i)\\b(END_FUNCTION_BLOCK)\\b",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"begin": "(\"(\\w*)\")(\\()",
+					"end": "([\\s\\S\\r])(\\))",
+					"beginCaptures": {
+						"1": { "name": "storage.type.function.scl"},
+						"2": { "name": "storage.type.function.scl"}
+					},
+					"endCaptures": {
+						"1":{
+							"patterns": [
+								{ "include": "#keywords" },
+								{ "include": "#strings" },
+								{ "include": "#operators" },
+								{ "include": "#support"	},
+								{ "include": "#constants" },
+								{ "include": "#punctuations" },
+								{ "include": "#comments"}
+							]
+						}
+					},
+					"patterns": [
+						{ "include": "#keywords" },
+						{ "include": "#strings" },
+						{ "include": "#operators" },
+						{ "include": "#support"	},
+						{ "include": "#constants" },
+						{ "include": "#punctuations" },
+						{ "include": "#comments"}
+					]
+				}
+			]	
+		},
+		"support":{
+			"patterns": [
+				{
+					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|INT|DINT|DT|DWORD|POINTER|REAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|VOID|WORD)\\b",
+					"name": "support.class.scl"
+				},
+				{
+					"match": "(?i)\\b(STRUCT|END_STRUCT)\\b",
+					"name": "support.type.scl"
+				},
+				{
+					"match": "(?i)\\b(ABS|SQR|SQRT|EXP|EXPD|LN|LOG|ACOS|ASIN|ATAN|COS|SIN|TAN)\\b",
+					"name": "support.function.scl"
+				},
+				{
+					"match": "(?i)\\b(ROL|ROR|SHL|SHR)\\b",
+					"name": "support.function.scl"
+				},
+				{
+					"match": "(?i)\\b(SEL|MAX|MIN|LIMIT|MUX)\\b",
+					"name": "support.function.scl"
+				},
+				{
+					"match": "(?i)\\b(ROUND|TRUNC)\\b",
+					"name": "support.function.scl"
+				},
+				{
+					"match": "(?i)\\b(S7_)\\w+",
+					"name": "support.variable.scl"
+				},
+				{
+					"captures": {
+						"1": { "name": "support.function.scl"}
+					},
+					"match": "\\w([a-zA-Z_$]\\w*)?(?=((\\()(.*?)(\\))))",
+					"name": "support.function.scl"
+				}
+
+			]
+		},
+		"constants":{
+			"patterns": [
+				{
+					"match": "\\b(T|TIME)#[0-9]((\\d*?d)?(\\d*?h)?(\\d*?m)?(\\d*?s)?(\\d*?ms)?)\\b",
+					"name": "constant.numeric.scl"					
+				},
+				{
+					"match": "\\b(16)#[0-9A-F]([0-9A-F]|\\_)+\\b",
+					"name": "constant.numeric.scl"					
+				},
+				{
+					"match": "\\b(2)#[0-1]([0-1]|\\_)+\\b",
+					"name": "constant.numeric.scl"					
+				},
+				{
+					"match": "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b",
+					"name": "constant.numeric.scl"					
+				},
+				{
+					"match": "(?i)\\btrue\\b",
+					"name": "constant.language.boolean.true.scl"					
+				},
+				{
+					"match": "(?i)\\bfalse\\b",
+					"name": "constant.language.boolean.false.scl"					
+				}
+			]
+		},
+		"punctuations":{
+			"patterns": [
+				{
+					"match": "\\;",
+					"name": "punctuation.terminator.statement.scl"	
+				}
+			]
+		},
+		"comments":{
+			"patterns": [
+				{
+					"captures": {
+						"0": { "name": "punctuation.definition.comment.scl"}
+					},
+					"begin": "\\(\\*",
+					"end": "\\*\\)",
+					"name": "comment.block.scl"
+				},
+				{
+					"captures": {
+						"1": { "name": "punctuation.definition.comment.scl"}
+					},
+					"match": "(//).*$\\n?",
+					"name": "comment.line.double-slash.scl"
+				}
+			]
+		},
+		"section":{
+			"patterns":[
+				{
+					"match": "(?i)\\b(region|end_region)\\b",
+					"name": "entity.name.section.scl"					
+				}
+			]
 		},
 		"strings": {
-			"name": "string.quoted.double.Siemens SCL",
+			"name": "string.quoted.single.scl",
 			"begin": "'",
 			"end": "'",
 			"patterns": [
 				{
-					"name": "constant.character.escape.Siemens SCL",
+					"name": "constant.character.escape.scl",
 					"match": "\\\\."
 				}
 			]
