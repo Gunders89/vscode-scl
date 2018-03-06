@@ -1,232 +1,509 @@
 {
-  "S7_a_type":{
-    "prefix": "S7_a_type",
-    "body" : "S7_a_type",
-    "description" : "The interface parameter is the message number input of message class x or the archive number input"
-  },
-  "S7_active":{
-    "prefix": "S7_active",
-    "body" : "S7_active",
-    "description" : "Identifies the declaration of a parameter"
-  },
-  "S7_alarm_ui":{
-    "prefix": "S7_alarm_ui",
-    "body" : "S7_alarm_ui",
-    "description" : "Message server ID. 0 = default, 1 = PCS 7 message dialog"
-  },
-  "S7_archive":{
-    "prefix": "S7_archive",
-    "body" : "S7_archive",
-    "description" : "Process values that are archived at runtime"
-  },
-  "S7_asset":{
-    "prefix": "S7_asset",
-    "body" : "S7_asset",
-    "description" : "Identifies a block/chart as an asset proxy"
-  },
-  "S7_blockview":{
-    "prefix": "S7_blockview",
-    "body" : "S7_blockview",
-    "description" : "Format or view of a block in CFC"
-  },
-  "S7_check":{
-    "prefix" :"S7_check",
-    "body": "S7_check",
-    "description": "Reserved for SIMATIC BATCH (manufacturing instruction)"
-  },
-  "S7_co":{
-    "prefix" :"S7_co",
-    "body": "S7_co",
-    "description": "Identifies a connection"
-  },
-  "S7_contact":{
-    "prefix": "S7_contact",
-    "body" : "S7_contact",
-    "description": "Parameter belongs to a connection group"
-  },
-  "S7_driver":{
-    "prefix": "S7_driver",
-    "body": "S7_driver",
-    "description" : "ID for the signal preprocessing driver block"
-  },
-  "S7_edit":{
-    "prefix": "S7_edit",
-    "body" : "S7_edit",
-    "description" : "Include the parameter in the Edit parameters/signals table for editing in Manager without opening the CFC chart"
-  },
-  "S7_enum":{
-    "prefix": "S7_enum",
-    "body": "S7_enum",
-    "description" : "Enumeration for SIMATIC BATCH"
-  },
-  "S7_event":{
-    "prefix": "S7_event",
-    "body": "S7_event",
-    "description" : "Indicates parameters to be transferred from the AS to the OS change-driven"
-  },
-  "S7_dynamic":{
-    "prefix": "S7_dynamic",
-    "body" : "S7_dynamic",
-    "description" : "A parameter assigned this system attribute is automatically registered for testing in CFC test mode"
-  },
-  "S7_hardware":{
-    "prefix": "S7_hardware",
-    "body" : "S7_hardware",
-    "description": "ID of a module-specific driver block"
-  },
-  "S7_language":{
-    "prefix": "S7_language",
-    "body" : "S7_language",
-    "description": "Language and time stamp for the Manage Multilingual Texts function"
-  },
-  "S7_link":{
-    "prefix": "S7_link",
-    "body": "S7_link",
-    "description" : "Defines whether the parameter can be interconnected in the CFC"
-  },
-  "S7_linklist":{
-    "prefix": "S7_linklist",
-    "body": "S7_linklist",
-    "description" : "Can be used to assign other blocks to an S7-GRAPH block"
-  },
-  "S7_m_c":{
-    "prefix": "S7_m_c",
-    "body": "S7_m_c",
-    "description":"Defines whether the operator can control and monitor the parameter at an OS"
-  },
-  "S7_measval":{
-    "prefix": "S7_measval",
-    "body": "S7_measval",
-    "description":"Identifies measured points"
-  },
-  "S7_mes":{
-    "prefix": "S7_mes",
-    "body": "S7_mes",
-    "description":"Identifies parameter as MES-relevant"
-  },
-  "S7_message":{
-    "prefix": "S7_message",
-    "body": "S7_message",
-    "description":"Identifies a parameter for communication"
-  },
-  "S7_param":{
-    "prefix": "S7_param",
-    "body": "S7_param",
-    "description" : "Defines whether the parameter can be programmed in the CFC"
-  },
-  "S7_pdiag":{
-    "prefix": "S7_pdiag",
-    "body": "S7_pdiag",
-    "description" : "Block with diagnostic capability for process error diagnostic"
-  },
-  "S7_pdiag_motion":{
-    "prefix": "S7_pdiag_motion",
-    "body": "S7_pdiag_motion",
-    "description" : "UDT for the S7-PDIAG language compiler"
-  },
-  "S7_pdiag_s_unit":{
-    "prefix": "S7_pdiag_s_unit",
-    "body": "S7_pdiag_s_unit",
-    "description" : "UDT for the S7-PDIAG language compiler"
-  },
-  "S7_pdiag_unit":{
-    "prefix": "S7_pdiag_unit",
-    "body": "S7_pdiag_unit",
-    "description" : "UDT for the S7-PDIAG language compiler"
-  },
-  "S7_rawdata":{
-    "prefix": "S7_rawdata",
-    "body": "S7_rawdata",
-    "description" : "Block instance also includes a raw data variable in WinCC"
-  },
-  "S7_read_back":{
-    "prefix": "S7_read_back",
-    "body": "S7_read_back",
-    "description" : "Allocate to the \"Chart > Readback\" function in the CFC"
-  },
-  "S7_sampletime":{
-    "prefix": "S7_sampletime",
-    "body": "S7_sampletime",
-    "description": "A parameter with this system attribute is automatically assigned the cycle time of the calling watchdog interrupt OB"
-  },
-  "S7_server":{
-    "prefix" : "S7_server",
-    "body" : "S7_server",
-    "description": "Identifies a parameter assigned to the message server"
-  },
-  "S7_server_1":{
-    "prefix" : "S7_server_1",
-    "body" : "S7_server_1",
-    "description": "Parameter is assigned to the connection server"
-  },
-  "S7_shortcut":{
-    "prefix": "S7_shortcut",
-    "body": "S7_shortcut",
-    "description": "Contains the parameter name with a maximum string length of 16 characters"
-  },
-  "S7_skipconn":{
-    "prefix": "S7_skipconn",
-    "body": "S7_skipconn",
-    "description": "Prevents code from being generated for the interconection of the block being handled"
-  },
-  "S7_state_rep":{
-    "prefix": "S7_state_rep",
-    "body": "S7_state_rep",
-    "description": "Identifies blocks for automatic alarm hiding in WinCC"
-  },
-  "S7_string_0":{
-    "prefix": "S7_string_0",
-    "body": "S7_string_0",
-    "description" : "Operator text \"0\" for binary values"
-  },
-  "S7_string_1":{
-    "prefix": "S7_string_1",
-    "body": "S7_string_1",
-    "description" : "Operator text \"1\" for binary values"
-  },
-  "S7_tag":{
-    "prefix": "S7_tag",
-    "body": "S7_tag",
-    "description" : "If this system attribute has the value \"false\", the block is not entered inthe tag list of the OS"
-  },
-  "S7_tagcollect":{
-    "prefix": "S7_tagcollect",
-    "body": "S7_tagcollect",
-    "description" : "Reserved for Simatic Batch"
-  },
-  "S7_tasklist":{
-    "prefix": "S7_tasklist",
-    "body": "S7_tasklist",
-    "description": "Contains a list of OBs in which the CFC has to install the block"
-  },
-  "S7_techparam":{
-    "prefix": "S7_techparam",
-    "body": "S7_techparam",
-    "description": "Block is used to assign parameters to technological functions"
-  },
-  "S7_trend":{
-    "prefix": "S7_trend",
-    "body": "S7_trend",
-    "description": "Sets the assignment to the block inputs used as limit values"
-  },
-  "S7_ts":{
-    "prefix": "S7_ts",
-    "body": "S7_ts",
-    "description": "Parameter has a time stamp for transfer to control system"
-  },
-  "S7_unit":{
-    "prefix" : "S7_unit",
-    "body" : "S7_unit",
-    "description":"Contains the name of the parameter\"s physical unit"
-  },
-  "S7_visible":{
-    "prefix": "S7_visible",
-    "body": "S7_visible",
-    "description":"Make parameters in CFC visible or invisible"
-  },
-  "S7_qc":{
-    "prefix": "S7_qc",
-    "body": "S7_qc",
-    "description" : "This attribute identifies parameters which provide the quality code in addition to the process value"
-  }
+    "If-statement":{
+        "prefix": "if",
+        "body": [
+            "if ${1:_condition_} then",
+            "\t${2://code};",
+            "end_if;",
+            "${3:}"
+        ],
+        "description" : "If clause"
+    },
+    "If-else":{
+        "prefix": "ife",
+        "body": [
+            "if ${1:_condition_} then",
+            "\t${2://code};",
+            "else",
+            "\t${3:\/\/code};",
+            "end_if;",
+            "${4:}"
+        ],
+        "description" : "If-else clause"
+    },
+    "If-elseif":{
+        "prefix": "iff",
+        "body": [
+            "if ${1:_condition_} then ",
+            "\t${2:\/\/code};",
+            "elsif ${3:_condition_} then",
+            "\t${4://code};",
+            "end_if;",
+            "${5:}"
+        ],
+        "description" : "If-elsif clause"
+    },
+    "If-elseif-else":{
+        "prefix": "iffe",
+        "body": [
+            "if ${1:_condition_} then",
+            "\t${2://code};",
+            "elsif ${3:_condition_} then",
+            "\t${4://code};",
+            "else",
+            "\t${5://code};",
+            "end_if;",
+            "${6:}"
+        ],
+        "description" : "If-elsif-else clause"
+    },
+    "Case-else":{
+        "prefix": "case",
+        "body": [
+            "case ${1:_variable_name_} of",
+            "\t${2:1}:",
+            "\t\t${3://Statement section case 1};",
+            "\t${4:2..4}:",
+            "\t\t${5://Statement section case 2 to 4};",
+            "\telse",
+            "\t${6://Statement section else};",
+            "end_case;",
+            "${7:}"
+        ],
+        "description" : "Case clause"
+    },
+    "For-loop":{
+        "prefix": "for",
+        "body": [
+            "for ${1:_variable_}:=${2:_value_} to ${3:_value_} do",
+            "\t${4://code};",
+            "end_for;",
+            "${5:}"
+        ],
+        "description" : "For-loop"
+    },
+    "While-loop":{
+        "prefix": "while",
+        "body": [
+            "while ${1:_condition_} do",
+            "\t${2://code};",
+            "end_while;",
+            "${3:}"
+        ],
+        "description" : "While-loop"
+    },
+    "Repeat-statement":{
+        "prefix": "repeat",
+        "body": [
+            "repeat ${1:_result_} := ${2:_value_};",
+            "until ${3:_condition_}",
+            "end_repeat;",
+            "${4:}"
+        ],
+        "description" : "Repeat-loop"
+    },
+    "New variable":{
+        "prefix": "nvar",
+        "body": [
+            "${1:_variable_name_} : ${2:DataType} ;",
+            "\t${3:}"
+        ],
+        "description" : "Variable declaration"
+    },
+    "New struct":{
+        "prefix": "struct",
+        "body": [
+            "${1:_struct_name_} :STRUCT",
+            "\t${2://structElements}",
+            "END_STRUCT;"
+        ],
+        "description" : "Struct clause"
+    },
+    "New array":{
+        "prefix": "arr",
+        "body": [
+            "${1:_array_name_} : ARRAY[${2:lo}..${3:hi}] OF ${4:DataType} ;",
+            "\t${5:}"
+        ],
+        "description" : "Array declaration"
+    },
+    "New var AT":{
+        "prefix": "varat",
+        "body": [
+            "${1:_variable_name_} AT ${2:_at_var_} : ${3:DataType} ;",
+            "\t${4:}"
+        ],
+        "description" : "Variable AT instruction"
+    },
+
+
+
+
+    "S7_a_type":{
+      "prefix": "S7_a_type",
+      "body" : "S7_a_type",
+      "description" : "The interface parameter is the message number input of message class x or the archive number input"
+    },
+    "S7_active":{
+      "prefix": "S7_active",
+      "body" : "S7_active",
+      "description" : "Identifies the declaration of a parameter"
+    },
+    "S7_alarm_ui":{
+      "prefix": "S7_alarm_ui",
+      "body" : "S7_alarm_ui",
+      "description" : "Message server ID. 0 = default, 1 = PCS 7 message dialog"
+    },
+    "S7_archive":{
+      "prefix": "S7_archive",
+      "body" : "S7_archive",
+      "description" : "Process values that are archived at runtime"
+    },
+    "S7_asset":{
+      "prefix": "S7_asset",
+      "body" : "S7_asset",
+      "description" : "Identifies a block/chart as an asset proxy"
+    },
+    "S7_blockview":{
+      "prefix": "S7_blockview",
+      "body" : "S7_blockview",
+      "description" : "Format or view of a block in CFC"
+    },
+    "S7_check":{
+      "prefix" :"S7_check",
+      "body": "S7_check",
+      "description": "Reserved for SIMATIC BATCH (manufacturing instruction)"
+    },
+    "S7_co":{
+      "prefix" :"S7_co",
+      "body": "S7_co",
+      "description": "Identifies a connection"
+    },
+    "S7_contact":{
+      "prefix": "S7_contact",
+      "body" : "S7_contact",
+      "description": "Parameter belongs to a connection group"
+    },
+    "S7_driver":{
+      "prefix": "S7_driver",
+      "body": "S7_driver",
+      "description" : "ID for the signal preprocessing driver block"
+    },
+    "S7_edit":{
+      "prefix": "S7_edit",
+      "body" : "S7_edit",
+      "description" : "Include the parameter in the Edit parameters/signals table for editing in Manager without opening the CFC chart"
+    },
+    "S7_enum":{
+      "prefix": "S7_enum",
+      "body": "S7_enum",
+      "description" : "Enumeration for SIMATIC BATCH"
+    },
+    "S7_event":{
+      "prefix": "S7_event",
+      "body": "S7_event",
+      "description" : "Indicates parameters to be transferred from the AS to the OS change-driven"
+    },
+    "S7_dynamic":{
+      "prefix": "S7_dynamic",
+      "body" : "S7_dynamic",
+      "description" : "A parameter assigned this system attribute is automatically registered for testing in CFC test mode"
+    },
+    "S7_hardware":{
+      "prefix": "S7_hardware",
+      "body" : "S7_hardware",
+      "description": "ID of a module-specific driver block"
+    },
+    "S7_language":{
+      "prefix": "S7_language",
+      "body" : "S7_language",
+      "description": "Language and time stamp for the Manage Multilingual Texts function"
+    },
+    "S7_link":{
+      "prefix": "S7_link",
+      "body": "S7_link",
+      "description" : "Defines whether the parameter can be interconnected in the CFC"
+    },
+    "S7_linklist":{
+      "prefix": "S7_linklist",
+      "body": "S7_linklist",
+      "description" : "Can be used to assign other blocks to an S7-GRAPH block"
+    },
+    "S7_m_c":{
+      "prefix": "S7_m_c",
+      "body": "S7_m_c",
+      "description":"Defines whether the operator can control and monitor the parameter at an OS"
+    },
+    "S7_measval":{
+      "prefix": "S7_measval",
+      "body": "S7_measval",
+      "description":"Identifies measured points"
+    },
+    "S7_mes":{
+      "prefix": "S7_mes",
+      "body": "S7_mes",
+      "description":"Identifies parameter as MES-relevant"
+    },
+    "S7_message":{
+      "prefix": "S7_message",
+      "body": "S7_message",
+      "description":"Identifies a parameter for communication"
+    },
+    "S7_param":{
+      "prefix": "S7_param",
+      "body": "S7_param",
+      "description" : "Defines whether the parameter can be programmed in the CFC"
+    },
+    "S7_pdiag":{
+      "prefix": "S7_pdiag",
+      "body": "S7_pdiag",
+      "description" : "Block with diagnostic capability for process error diagnostic"
+    },
+    "S7_pdiag_motion":{
+      "prefix": "S7_pdiag_motion",
+      "body": "S7_pdiag_motion",
+      "description" : "UDT for the S7-PDIAG language compiler"
+    },
+    "S7_pdiag_s_unit":{
+      "prefix": "S7_pdiag_s_unit",
+      "body": "S7_pdiag_s_unit",
+      "description" : "UDT for the S7-PDIAG language compiler"
+    },
+    "S7_pdiag_unit":{
+      "prefix": "S7_pdiag_unit",
+      "body": "S7_pdiag_unit",
+      "description" : "UDT for the S7-PDIAG language compiler"
+    },
+    "S7_rawdata":{
+      "prefix": "S7_rawdata",
+      "body": "S7_rawdata",
+      "description" : "Block instance also includes a raw data variable in WinCC"
+    },
+    "S7_read_back":{
+      "prefix": "S7_read_back",
+      "body": "S7_read_back",
+      "description" : "Allocate to the \"Chart > Readback\" function in the CFC"
+    },
+    "S7_sampletime":{
+      "prefix": "S7_sampletime",
+      "body": "S7_sampletime",
+      "description": "A parameter with this system attribute is automatically assigned the cycle time of the calling watchdog interrupt OB"
+    },
+    "S7_server":{
+      "prefix" : "S7_server",
+      "body" : "S7_server",
+      "description": "Identifies a parameter assigned to the message server"
+    },
+    "S7_server_1":{
+      "prefix" : "S7_server_1",
+      "body" : "S7_server_1",
+      "description": "Parameter is assigned to the connection server"
+    },
+    "S7_shortcut":{
+      "prefix": "S7_shortcut",
+      "body": "S7_shortcut",
+      "description": "Contains the parameter name with a maximum string length of 16 characters"
+    },
+    "S7_skipconn":{
+      "prefix": "S7_skipconn",
+      "body": "S7_skipconn",
+      "description": "Prevents code from being generated for the interconection of the block being handled"
+    },
+    "S7_state_rep":{
+      "prefix": "S7_state_rep",
+      "body": "S7_state_rep",
+      "description": "Identifies blocks for automatic alarm hiding in WinCC"
+    },
+    "S7_string_0":{
+      "prefix": "S7_string_0",
+      "body": "S7_string_0",
+      "description" : "Operator text \"0\" for binary values"
+    },
+    "S7_string_1":{
+      "prefix": "S7_string_1",
+      "body": "S7_string_1",
+      "description" : "Operator text \"1\" for binary values"
+    },
+    "S7_tag":{
+      "prefix": "S7_tag",
+      "body": "S7_tag",
+      "description" : "If this system attribute has the value \"false\", the block is not entered inthe tag list of the OS"
+    },
+    "S7_tagcollect":{
+      "prefix": "S7_tagcollect",
+      "body": "S7_tagcollect",
+      "description" : "Reserved for Simatic Batch"
+    },
+    "S7_tasklist":{
+      "prefix": "S7_tasklist",
+      "body": "S7_tasklist",
+      "description": "Contains a list of OBs in which the CFC has to install the block"
+    },
+    "S7_techparam":{
+      "prefix": "S7_techparam",
+      "body": "S7_techparam",
+      "description": "Block is used to assign parameters to technological functions"
+    },
+    "S7_trend":{
+      "prefix": "S7_trend",
+      "body": "S7_trend",
+      "description": "Sets the assignment to the block inputs used as limit values"
+    },
+    "S7_ts":{
+      "prefix": "S7_ts",
+      "body": "S7_ts",
+      "description": "Parameter has a time stamp for transfer to control system"
+    },
+    "S7_unit":{
+      "prefix" : "S7_unit",
+      "body" : "S7_unit",
+      "description":"Contains the name of the parameter\"s physical unit"
+    },
+    "S7_visible":{
+      "prefix": "S7_visible",
+      "body": "S7_visible",
+      "description":"Make parameters in CFC visible or invisible"
+    },
+    "S7_qc":{
+      "prefix": "S7_qc",
+      "body": "S7_qc",
+      "description" : "This attribute identifies parameters which provide the quality code in addition to the process value"
+    },
+
+
+
+    "Function block":{
+        "prefix": "fb",
+        "description":"Function block template",
+        "body": [
+            "\/\/Compiler Option --------------------------------------------",
+            "{S7ServerActive              := 'n'  }",
+            "{SetOKFlag                   := 'n'  }",
+            "{MonitorArrayLimits          := 'n'  }",
+            "{OverwriteBlocks             := 'y'  }",
+            "{CreateObjectCode            := 'y'  }",
+            "{OptimizeObjectCode          := 'y'  }",
+            "{CreateDebugInfo             := 'y'  }",
+            "{GenerateReferenceData       := 'y'  }",
+            "{SetMaximumStringLength      := '254'}",
+            "\/\/------------------------------------------------------------",
+            "FUNCTION_BLOCK \"${1:Name}\"\nTITLE = '[V#01.01.01.01] ${2:Short description}'",
+            "\/\/Copyright (c) 20xx Copyright ${3:Author} All Rights Reserved.",
+            "",
+            "",
+            "",
+            "\/\/===============================================================================",
+            "",
+            "",
+            "",
+            "",
+            "\/\/[V#01.01.01.01],${3:Author},${4:date}\t\tOriginal Version",
+            "AUTHOR\t :\t${3:Author}",
+            "FAMILY\t :\t${5:Family}",
+            "NAME\t\t :\t${1:Name}",
+            "VERSION\t:\t${7:'1.0'}",
+            "KNOW_HOW_PROTECT",
+            "\/\/------------------------------------------------------------------------------------",
+            "\/\/  Declaration of Variables",
+            "\/\/------------------------------------------------------------------------------------",
+            "${8:}",
+            "CONST",
+            "\t\/\/constants",
+            "END_CONST",
+            "",
+            "VAR_INPUT",
+            "\t\/\/inputs",
+            "END_VAR",
+            "",
+            "VAR_IN_OUT",
+            "\t\/\/in_outs",
+            "END_VAR",
+            "",
+            "VAR_OUTPUT",
+            "\t\/\/outputs",
+            "END_VAR",
+            "",
+            "VAR",
+            "\t\/\/variables",
+            "END_VAR",
+            "",
+            "VAR_TEMP",
+            "\t\/\/temporary variables",
+            "END_VAR",
+            "",
+            "\/\/------------------------------------------------------------------------------------",
+            "\/\/  Code Section",
+            "\/\/------------------------------------------------------------------------------------",
+            "",
+            "BEGIN",
+            "\/\/code",
+            "END_FUNCTION_BLOCK"
+        ]
+
+    },
+
+    "Function":{
+        "prefix": "fn",
+        "description":"Function template",
+        "body": [
+            "\/\/Compiler Option --------------------------------------------",
+            "{S7ServerActive              := 'n'  }",
+            "{SetOKFlag                   := 'n'  }",
+            "{MonitorArrayLimits          := 'n'  }",
+            "{OverwriteBlocks             := 'y'  }",
+            "{CreateObjectCode            := 'y'  }",
+            "{OptimizeObjectCode          := 'y'  }",
+            "{CreateDebugInfo             := 'y'  }",
+            "{GenerateReferenceData       := 'y'  }",
+            "{SetMaximumStringLength      := '254'}",
+            "\/\/------------------------------------------------------------",
+            "FUNCTION \"${1:Name}\":${2:DataType}\nTITLE = '[V#01.01.01.01] ${3:Short description}'",
+            "\/\/Copyright (c) 20xx Copyright ${4:Author} All Rights Reserved.",
+            "",
+            "",
+            "",
+            "\/\/===============================================================================",
+            "",
+            "",
+            "",
+            "",
+            "\/\/[V#01.01.01.01],${4:Author},${5:date}\t\tOriginal Version",
+            "AUTHOR\t :\t${4:Author}",
+            "FAMILY\t :\t${6:Family}",
+            "NAME\t\t :\t${1:Name}",
+            "VERSION\t:\t${7:'1.0'}",
+            "KNOW_HOW_PROTECT",
+            "\/\/------------------------------------------------------------------------------------",
+            "\/\/  Declaration of Variables",
+            "\/\/------------------------------------------------------------------------------------",
+            "${8}",
+            "CONST",
+            "\t\/\/constants",
+            "END_CONST",
+            "",
+            "VAR_INPUT",
+            "\t\/\/inputs",
+            "END_VAR",
+            "",
+            "VAR_IN_OUT",
+            "\t\/\/in_outs",
+            "END_VAR",
+            "",
+            "VAR_OUTPUT",
+            "\t\/\/outputs",
+            "END_VAR",
+            "",
+            "VAR",
+            "\t\/\/variables",
+            "END_VAR",
+            "",
+            "VAR_TEMP",
+            "\t\/\/temporary variables",
+            "END_VAR",
+            "",
+            "\/\/------------------------------------------------------------------------------------",
+            "\/\/  Code Section",
+            "\/\/------------------------------------------------------------------------------------",
+            "",
+            "BEGIN",
+            "\/\/code",
+            "END_FUNCTION"
+        ]
+
+    }
+
+
+
 }
+
+

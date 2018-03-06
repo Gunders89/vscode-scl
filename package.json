@@ -25,10 +25,6 @@
         "snippets": [{
             "language": "siemensscl",
             "path": "./snippets/vscode-scl.json"
-        }],
-        "s7attributes": [{
-            "language": "siemensscl",
-            "path": "./snippets/s7sys_attributes.json"
         }]
     }
 }
