@@ -1,10 +1,10 @@
-# scl README
+# README
 
 Siemens SCL language support for Visual Studio Code
 
 ## Features
 
-Adds syntax highlighting and snippets to SCL files in Atom
+Adds syntax highlighting and snippets to SCL files in Visual Studio Code
 
 
 ## Contributions
