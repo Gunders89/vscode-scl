@@ -9,7 +9,8 @@
 		{ "include": "#storage"	},
 		{ "include": "#support"	},
 		{ "include": "#constants" },
-		{ "include": "#punctuations" }
+		{ "include": "#punctuations" },
+		{ "include": "#section" }
 
 	],
 	"repository": {
