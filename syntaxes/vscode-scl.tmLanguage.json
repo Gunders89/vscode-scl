@@ -7,8 +7,8 @@
 		{ "include": "#strings" },
 		{ "include": "#operators" },
 		{ "include": "#storage"	},
-		{ "include": "#support"	},
 		{ "include": "#constants" },
+		{ "include": "#support"	},
 		{ "include": "#punctuations" },
 		{ "include": "#section" }
 
@@ -103,8 +103,8 @@
 								{ "include": "#keywords" },
 								{ "include": "#strings" },
 								{ "include": "#operators" },
-								{ "include": "#support"	},
 								{ "include": "#constants" },
+								{ "include": "#support"	},
 								{ "include": "#punctuations" },
 								{ "include": "#comments"}
 							]
@@ -114,8 +114,8 @@
 						{ "include": "#keywords" },
 						{ "include": "#strings" },
 						{ "include": "#operators" },
-						{ "include": "#support"	},
 						{ "include": "#constants" },
+						{ "include": "#support"	},
 						{ "include": "#punctuations" },
 						{ "include": "#comments"}
 					]
@@ -125,7 +125,7 @@
 		"support":{
 			"patterns": [
 				{
-					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|INT|DINT|DT|DWORD|POINTER|REAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|VOID|WORD)\\b",
+					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|INT|DINT|DT|DWORD|POINTER|REAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|UINT|VOID|WORD)\\b",
 					"name": "support.class.scl"
 				},
 				{
@@ -165,7 +165,7 @@
 		"constants":{
 			"patterns": [
 				{
-					"match": "\\b(T|TIME)#[0-9]((\\d*?d)?(\\d*?h)?(\\d*?m)?(\\d*?s)?(\\d*?ms)?)\\b",
+					"match": "\\b(T|TIME)#(((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?d)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?h)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?m)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?s)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?ms)?)\\b",	
 					"name": "constant.numeric.scl"					
 				},
 				{
