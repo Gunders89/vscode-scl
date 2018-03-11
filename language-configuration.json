@@ -13,12 +13,10 @@
     ],
     // symbols that are auto closed when typing
     "autoClosingPairs": [
-        ["{", "}"],
-        ["[", "]"],
-        ["(", ")"],
-        ["\"", "\""],
-        ["'", "'"],
-        ["(*","*)"]
+        { "open": "[", "close": "]" },
+		{ "open": "{", "close": "}" },
+        {"open": "(", "close": ")"},
+        { "open": "'", "close": "'", "notIn": ["string", "comment"] }
     ],
     // symbols that that can be used to surround a selection
     "surroundingPairs": [
@@ -26,7 +24,10 @@
         ["[", "]"],
         ["(", ")"],
         ["\"", "\""],
-        ["'", "'"],
-        ["(*","*)"]
-    ]
+        ["'", "'"]
+    ],
+    "indentationRules": {
+        "increaseIndentPattern": "^\\s*(if|IF|then|THEN|elsif|ELSIF|else|ELSE|case|CASE|[0-9]*\\:|for|FOR|while|WHILE|do|DO|repeat|REPEAT|region|REGION|const|CONST|var|VAR|var_input|VAR_INPUT|var_output|VAR_OUTPUT|var_in_out|VAR_IN_OUT|var_temp|VAR_TEMP).*$",
+        "decreaseIndentPattern": "^\\s*(then|THEN|do|DO|end_if;|END_IF;|end_case;|END_CASE;|end_for;|END_FOR;|end_while;|END_WHILE;|until|UNTIL|end_repeat;|END_REPEAT;|end_region|END_REGION|end_const|END_CONST|end_var|END_VAR).*$"
+    }
 }
