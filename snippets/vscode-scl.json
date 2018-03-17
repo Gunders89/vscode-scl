@@ -126,6 +126,271 @@
         "description" : "Variable AT instruction"
     },
 
+    "Bool to int":{
+      "prefix":"bo2i",
+      "body": ["bool_to_int(${1:})"],
+      "description": "Convert bool to int"
+    },
+    "Bool to dint":{
+      "prefix":"bo2di",
+      "body": ["bool_to_dint(${1:})"],
+      "description": "Convert bool to double int"
+    },
+    "Byte to bool":{
+      "prefix":"b2bo",
+      "body": ["byte_to_bool(${1:})"],
+      "description": "Convert byte to bool"
+    },
+    "Byte to char":{
+      "prefix":"b2c",
+      "body": ["byte_to_char(${1:})"],
+      "description": "Convert byte to char"
+    },
+    "Byte to int":{
+      "prefix":"b2i",
+      "body": ["byte_to_int(${1:})"],
+      "description": "Convert byte to int"
+    },
+    "Byte to dint":{
+      "prefix":"b2di",
+      "body": ["byte_to_dint(${1:})"],
+      "description": "Convert byte to double int"
+    },
+    "char_to_byte":{
+      "prefix":"c2b",
+      "body": ["char_to_byte(${1:})"],
+      "description": "Convert char to byte"
+    },
+    "char_to_int":{
+      "prefix":"c2i",
+      "body": ["char_to_int(${1:})"],
+      "description": "Convert char to int"
+    },
+    "date_to_dint":{
+      "prefix":"d2di",
+      "body": ["date_to_dint(${1:})"],
+      "description": "Convert date to double int"
+    },
+    "dint_to_date":{
+      "prefix":"di2d",
+      "body": ["dint_to_date(${1:})"],
+      "description": "Convert dint to date"
+    },
+    "dint_to_dword":{
+      "prefix":"di2dw",
+      "body": ["dint_to_dword(${1:})"],
+      "description": "Convert double int to double word"
+    },
+    "dint_to_int":{
+      "prefix":"di2i",
+      "body": ["dint_to_int(${1:})"],
+      "description": "Convert double int to int"
+    },    
+    "dint_to_time":{
+      "prefix":"di2t",
+      "body": ["dint_to_time(${1:})"],
+      "description": "Convert double int to time"
+    },
+    "dint_to_tod":{
+      "prefix":"di2tod",
+      "body": ["dint_to_tod(${1:})"],
+      "description": "Convert double int to time of day"
+    },
+    "dint_to_bool":{
+      "prefix":"di2bo",
+      "body": ["dint_to_bool(${1:})"],
+      "description": "Convert double int to bool"
+    },
+    "dint_to_byte":{
+      "prefix":"di2b",
+      "body": ["dint_to_byte(${1:})"],
+      "description": "Convert double int to byte"
+    },
+    "dint_to_string":{
+      "prefix":"di2s",
+      "body": ["dint_to_string(${1:})"],
+      "description": "Convert double int to string"
+    },
+    "dint_to_word":{
+      "prefix":"di2w",
+      "body": ["dint_to_word(${1:})"],
+      "description": "Convert double int to word"
+    },
+    "dword_to_bool":{
+      "prefix":"dw2bo",
+      "body": ["dword_to_bool(${1:})"],
+      "description": "Convert double word to bool"
+    },
+    "dword_to_byte":{
+      "prefix":"dw2b",
+      "body": ["dword_to_byte(${1:})"],
+      "description": "Convert double word to byte"
+    },
+    "dword_to_dint":{
+      "prefix":"dw2di",
+      "body": ["dword_to_dint(${1:})"],
+      "description": "Convert double word to double int"
+    },
+    "dword_to_real":{
+      "prefix":"dw2r",
+      "body": ["dword_to_real(${1:})"],
+      "description": "Convert double word to real"
+    },
+    "dword_to_word":{
+      "prefix":"dw2w",
+      "body": ["dword_to_word(${1:})"],
+      "description": "Convert double word to word"
+    },
+    "dword_to_int":{
+      "prefix":"dw2i",
+      "body": ["dword_to_int(${1:})"],
+      "description": "Convert double word to int"
+    },
+    "int_to_char":{
+      "prefix":"i2c",
+      "body": ["int_to_char(${1:})"],
+      "description": "Convert int to char"
+    },
+    "int_to_word":{
+      "prefix":"i2w",
+      "body": ["int_to_word(${1:})"],
+      "description": "Convert int to word"
+    },
+    "int_to_byte":{
+      "prefix":"i2b",
+      "body": ["int_to_byte(${1:})"],
+      "description": "Convert int to byte"
+    },
+    "int_to_dword":{
+      "prefix":"i2dw",
+      "body": ["int_to_dword(${1:})"],
+      "description": "Convert int to double word"
+    },
+    "int_to_string":{
+      "prefix":"i2s",
+      "body": ["int_to_string(${1:})"],
+      "description": "Convert int to string"
+    },
+    "real_to_dint":{
+      "prefix":"r2di",
+      "body": ["real_to_dint(${1:})"],
+      "description": "Convert real to double int"
+    },
+    "real_to_dword":{
+      "prefix":"r2dw",
+      "body": ["real_to_dword(${1:})"],
+      "description": "Convert real to double word"
+    },
+    "real_to_int":{
+      "prefix":"r2i",
+      "body": ["real_to_int(${1:})"],
+      "description": "Convert real to int"
+    },
+    "real_to_string":{
+      "prefix":"r2s",
+      "body": ["real_to_string(${1:})"],
+      "description": "Convert real to string"
+    },
+    "string_to_char":{
+      "prefix":"s2c",
+      "body": ["string_to_char(${1:})"],
+      "description": "Convert string to char"
+    },
+    "string_to_int":{
+      "prefix":"s2i",
+      "body": ["string_to_int(${1:})"],
+      "description": "Convert string to int"
+    },
+    "string_to_dint":{
+      "prefix":"s2di",
+      "body": ["string_to_dint(${1:})"],
+      "description": "Convert string to double int"
+    },
+    "string_to_real":{
+      "prefix":"s2r",
+      "body": ["string_to_real(${1:})"],
+      "description": "Convert string to real"
+    },
+    "time_to_dint":{
+      "prefix":"t2di",
+      "body": ["time_to_dint(${1:})"],
+      "description": "Convert time to double int"
+    },
+    "tod_to_dint":{
+      "prefix":"tod2di",
+      "body": ["tod_to_dint(${1:})"],
+      "description": "Convert time of day to double int"
+    },
+    "word_to_bool":{
+      "prefix":"w2bo",
+      "body": ["word_to_bool(${1:})"],
+      "description": "Convert word to bool"
+    },
+    "word_to_byte":{
+      "prefix":"w2b",
+      "body": ["word_to_byte(${1:})"],
+      "description": "Convert word to byte"
+    },
+    "word_to_int":{
+      "prefix":"w2i",
+      "body": ["word_to_int(${1:})"],
+      "description": "Convert word to int"
+    },
+    "word_to_dint":{
+      "prefix":"w2di",
+      "body": ["word_to_dint(${1:})"],
+      "description": "Convert word to double int"
+    },
+    "word_to_block_db":{
+      "prefix":"w2db",
+      "body": ["word_to_block_db(${1:})"],
+      "description": "Convert word to block DB"
+    },
+    "block_db_to_word":{
+      "prefix":"db2w",
+      "body": ["block_db_to_word(${1:})"],
+      "description": "Convert block DB to word"
+    },
+    "bcd_to_int":{
+      "prefix":"bcd2i",
+      "body": ["bcd_to_int(${1:})"],
+      "description": "Convert binary coded decimal to int"
+    },
+    "word_bcd_to_int":{
+      "prefix":"wbcd2i",
+      "body": ["word_bcd_to_int(${1:})"],
+      "description": "Convert word binary coded decimal to int"
+    },
+    "int_to_bcd":{
+      "prefix":"i2bcd",
+      "body": ["int_to_bcd(${1:})"],
+      "description": "Convert int to binary coded decimal"
+    },
+    "int_to_bcd_word":{
+      "prefix":"i2bcdw",
+      "body": ["int_to_bcd_word(${1:})"],
+      "description": "Convert int to binary coded decimal word"
+    },
+    "bcd_to_dint":{
+      "prefix":"bcd2di",
+      "body": ["bcd_to_dint(${1:})"],
+      "description": "Convert binary coded decimal to double int"
+    },
+    "dword_bcd_to_dint":{
+      "prefix":"dwbcd2di",
+      "body": ["dword_bcd_to_dint(${1:})"],
+      "description": "Convert double word binary coded decimal to double int"
+    },
+    "dint_to_bcd":{
+      "prefix":"di2bcd",
+      "body": ["dint_to_bcd(${1:})"],
+      "description": "Convert double int to binary coded decimal"
+    },
+    "dint_to_bcd_dword":{
+      "prefix":"di2bcddw",
+      "body": ["dint_to_bcd_dword(${1:})"],
+      "description": "Convert double int to binary coded decimal double word"
+    },
 
 
 
