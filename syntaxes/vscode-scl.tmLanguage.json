@@ -91,36 +91,65 @@
 					"name": "storage.type.function.scl"
 				},
 				{
-					"begin": "(\"(\\w*)\")(\\()",
-					"end": "([\\s\\S\\r])(\\))",
+					"begin": "(\"(\\w*)\")(\\r*\\n*\\s*)",
+					"end": "(\\()(.*)(\\))",
 					"beginCaptures": {
 						"1": { "name": "storage.type.function.scl"},
 						"2": { "name": "storage.type.function.scl"}
 					},
 					"endCaptures": {
-						"1":{
+						"2": {
 							"patterns": [
-								{ "include": "#keywords" },
-								{ "include": "#strings" },
-								{ "include": "#operators" },
-								{ "include": "#constants" },
-								{ "include": "#support"	},
-								{ "include": "#punctuations" },
-								{ "include": "#comments"}
+								{
+									"include": "#endOfCall"
+								}
 							]
 						}
 					},
 					"patterns": [
+						{ "include": "#comments"},
 						{ "include": "#keywords" },
 						{ "include": "#strings" },
 						{ "include": "#operators" },
+						{ "include": "#storage"	},
 						{ "include": "#constants" },
 						{ "include": "#support"	},
-						{ "include": "#punctuations" },
-						{ "include": "#comments"}
+						{ "include": "#punctuations" }
 					]
 				}
 			]	
+		},
+		"endOfCall":{
+			"patterns": [
+				{
+					"begin": ".*",
+					"end": "(\\))",
+					"beginCaptures": {
+						"1": { 
+							"patterns": [
+								{ "include": "#comments"},
+								{ "include": "#keywords" },
+								{ "include": "#strings" },
+								{ "include": "#operators" },
+								{ "include": "#storage"	},
+								{ "include": "#constants" },
+								{ "include": "#support"	},
+								{ "include": "#punctuations" }
+							]
+						}
+					},
+					"patterns": [
+						{ "include": "#comments"},
+						{ "include": "#keywords" },
+						{ "include": "#strings" },
+						{ "include": "#operators" },
+						{ "include": "#storage"	},
+						{ "include": "#constants" },
+						{ "include": "#support"	},
+						{ "include": "#punctuations" }
+					]					
+				}
+			]
 		},
 		"support":{
 			"patterns": [
