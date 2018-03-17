@@ -9,3 +9,6 @@ All notable changes to the "scl" extension will be documented in this file.
 - Edited regex for recognizing time constants
 - Added indent patterns
 - Block comment can now be applied by pressing <kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>A</kbd>
+
+## [0.0.3]
+- Added snippets for type conversion
