@@ -12,3 +12,4 @@ All notable changes to the "scl" extension will be documented in this file.
 
 ## [0.0.3]
 - Added snippets for type conversion
+- Edited highlighting of quoted function calls (ignore whitespace)
