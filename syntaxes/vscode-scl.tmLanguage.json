@@ -91,7 +91,7 @@
 					"name": "storage.type.function.scl"
 				},
 				{
-					"begin": "(\"(\\w*)\")(\\r*\\n*\\s*)",
+					"begin": "(\"(\\w+?)\")(\\r*\\n*\\s*)",
 					"end": "(\\()(.*)(\\))",
 					"beginCaptures": {
 						"1": { "name": "storage.type.function.scl"},
