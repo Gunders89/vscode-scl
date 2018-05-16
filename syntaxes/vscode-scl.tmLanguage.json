@@ -47,7 +47,7 @@
 			]
 
 		},
-				
+						
 		"storage": {
 			"patterns": [
 				{
@@ -185,7 +185,7 @@
 				{
 					"match":"(?i)\\b(word_bcd_to_int)\\b",
 					"name":"support.function.scl"
-					},
+				},
 				{
 					"match":"(?i)\\b(dword_bcd_to_dint)\\b",
 					"name":"support.function.scl"
