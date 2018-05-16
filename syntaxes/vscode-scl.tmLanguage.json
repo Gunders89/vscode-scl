@@ -127,6 +127,10 @@
 					"name": "support.variable.scl"
 				},
 				{
+					"match": "(?i)\\b(TIME_TCK)\\b",
+					"name": "support.function.scl"
+				},
+				{
 					"match":"(?i)\\b(bool_to_int|bool_to_dint)\\b",
 					"name":"support.function.scl"
 				},
