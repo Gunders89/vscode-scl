@@ -127,13 +127,69 @@
 					"name": "support.variable.scl"
 				},
 				{
-					"captures": {
-						"1": { "name": "support.function.scl"}
+					"match":"(?i)\\b(bool_to_int|bool_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(byte_to_bool|byte_to_char|byte_to_int|byte_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(char_to_byte|char_to_int)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(date_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(dint_to_date|dint_to_dword|dint_to_int|dint_to_time|dint_to_tod|dint_to_bool|dint_to_byte|dint_to_string|dint_to_word|dint_to_bcd|dint_to_bcd_dword)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(dword_to_bool|dword_to_byte|dword_to_dint|dword_to_real|dword_to_word|dword_to_int)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(int_to_char|int_to_word|int_to_byte|int_to_dword|int_to_string|int_to_bcd|int_to_bcd_word)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(real_to_dint|real_to_dword|real_to_int|real_to_string)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(string_to_char|string_to_int|string_to_dint|string_to_real)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(time_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(tod_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(word_to_bool|word_to_byte|word_to_int|word_to_dint|word_to_block_db)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(block_db_to_word)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(bcd_to_int|bcd_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(word_bcd_to_int)\\b",
+					"name":"support.function.scl"
 					},
-					"match": "\\w([a-zA-Z_$]\\w*)?(?=((\\()(.*?)(\\))))",
-					"name": "support.function.scl"
+				{
+					"match":"(?i)\\b(dword_bcd_to_dint)\\b",
+					"name":"support.function.scl"
 				}
-
 			]
 		},
 		"constants":{
