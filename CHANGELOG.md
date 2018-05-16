@@ -8,7 +8,8 @@ All notable changes to the "scl" extension will be documented in this file.
 - Reduced complexity of how functions are recognized
 - Fixed a bug where function names would be tokenized as function type
 
-## []0.05]
+## [0.0.5]
+- This version was skipped (the version number was altered before publish)
 
 ## [0.0.4]
 - Added icon
