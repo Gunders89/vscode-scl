@@ -1,6 +1,9 @@
 # README
 
-Siemens SCL language support for Visual Studio Code
+Siemens SCL language support for Visual Studio Code.
+
+## Download
+Download this extension through Visual Studio Code (search in Extensions), or click this [link](https://marketplace.visualstudio.com/items?itemName=Gunders89.vscode-scl).
 
 ## Features
 
