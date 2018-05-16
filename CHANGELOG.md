@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "scl" extension will be documented in this file.
 
+## [0.0.5]
+- Reduced complexity of how functions are recognized
+- Fixed a bug where function names would be tokenized as function type
+
 ## [0.0.4]
 - Added icon
 
