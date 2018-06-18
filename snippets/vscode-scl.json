@@ -125,57 +125,57 @@
         ],
         "description" : "Variable AT instruction"
     },
-    "Bool to byte":{
+    "bool_to_byte":{
       "prefix":"bo2b",
       "body": ["bool_to_byte(${1:})"],
       "description": "Convert bool to byte"
     },
-    "Bool to dword":{
+    "bool_to_dword":{
       "prefix":"bo2dw",
       "body": ["bool_to_dword(${1:})"],
       "description": "Convert bool to double word"
     },
-    "Bool to word":{
+    "bool_to_word":{
       "prefix":"bo2w",
       "body": ["bool_to_word(${1:})"],
       "description": "Convert bool to word"
     },
-    "Bool to int":{
+    "bool_to_int":{
       "prefix":"bo2i",
       "body": ["bool_to_int(${1:})"],
       "description": "Convert bool to int"
     },
-    "Bool to dint":{
+    "bool_to_dint":{
       "prefix":"bo2di",
       "body": ["bool_to_dint(${1:})"],
       "description": "Convert bool to double int"
     },
-    "Byte to bool":{
+    "byte_to_bool":{
       "prefix":"b2bo",
       "body": ["byte_to_bool(${1:})"],
       "description": "Convert byte to bool"
     },
-    "Byte to char":{
+    "byte_to_char":{
       "prefix":"b2c",
       "body": ["byte_to_char(${1:})"],
       "description": "Convert byte to char"
     },
-    "Byte to dword":{
+    "byte_to_dword":{
       "prefix":"b2dw",
       "body": ["byte_to_dword(${1:})"],
       "description": "Convert byte to double word"
     },
-    "Byte to word":{
+    "byte_to_word":{
       "prefix":"b2w",
       "body": ["byte_to_word(${1:})"],
       "description": "Convert byte to word"
     },
-    "Byte to int":{
+    "byte_to_int":{
       "prefix":"b2i",
       "body": ["byte_to_int(${1:})"],
       "description": "Convert byte to int"
     },
-    "Byte to dint":{
+    "byte_to_dint":{
       "prefix":"b2di",
       "body": ["byte_to_dint(${1:})"],
       "description": "Convert byte to double int"
