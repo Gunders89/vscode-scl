@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to the "scl" extension will be documented in this file.
 
+## [0.0.8]
+- Added Class A conversions to snippets and highlighting
+
 ## [0.0.7]
 - Fixed version number discrepancy between changelog and actual version number
 

@@ -131,15 +131,15 @@
 					"name": "support.function.scl"
 				},
 				{
-					"match":"(?i)\\b(bool_to_int|bool_to_dint)\\b",
+					"match":"(?i)\\b(bool_to_byte|bool_to_dword|bool_to_word|bool_to_int|bool_to_dint)\\b",
 					"name":"support.function.scl"
 				},
 				{
-					"match":"(?i)\\b(byte_to_bool|byte_to_char|byte_to_int|byte_to_dint)\\b",
+					"match":"(?i)\\b(byte_to_bool|byte_to_char|byte_to_dword|byte_to_int|byte_to_dint|byte_to_word)\\b",
 					"name":"support.function.scl"
 				},
 				{
-					"match":"(?i)\\b(char_to_byte|char_to_int)\\b",
+					"match":"(?i)\\b(char_to_byte|char_to_int|char_to_string)\\b",
 					"name":"support.function.scl"
 				},
 				{
@@ -147,7 +147,7 @@
 					"name":"support.function.scl"
 				},
 				{
-					"match":"(?i)\\b(dint_to_date|dint_to_dword|dint_to_int|dint_to_time|dint_to_tod|dint_to_bool|dint_to_byte|dint_to_string|dint_to_word|dint_to_bcd|dint_to_bcd_dword)\\b",
+					"match":"(?i)\\b(dint_to_date|dint_to_dword|dint_to_int|dint_to_time|dint_to_tod|dint_to_bool|dint_to_byte|dint_to_real|dint_to_string|dint_to_word|dint_to_bcd|dint_to_bcd_dword)\\b",
 					"name":"support.function.scl"
 				},
 				{
@@ -155,7 +155,7 @@
 					"name":"support.function.scl"
 				},
 				{
-					"match":"(?i)\\b(int_to_char|int_to_word|int_to_byte|int_to_dword|int_to_string|int_to_bcd|int_to_bcd_word)\\b",
+					"match":"(?i)\\b(int_to_char|int_to_word|int_to_byte|int_to_dint|int_to_dword|int_to_real|int_to_string|int_to_bcd|int_to_bcd_word)\\b",
 					"name":"support.function.scl"
 				},
 				{
@@ -175,7 +175,7 @@
 					"name":"support.function.scl"
 				},
 				{
-					"match":"(?i)\\b(word_to_bool|word_to_byte|word_to_int|word_to_dint|word_to_block_db)\\b",
+					"match":"(?i)\\b(word_to_bool|word_to_byte|word_to_int|word_to_dint|word_to_dword|word_to_block_db)\\b",
 					"name":"support.function.scl"
 				},
 				{
