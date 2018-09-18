@@ -195,6 +195,11 @@
       "body": ["char_to_string(${1:})"],
       "description": "Convert char to string"
     },
+    "char_to_wstring":{
+      "prefix":"c2ws",
+      "body": ["char_to_wstring(${1:})"],
+      "description": "Convert char to wstring"
+    },
     "date_to_dint":{
       "prefix":"d2di",
       "body": ["date_to_dint(${1:})"],
@@ -244,6 +249,11 @@
       "prefix":"di2s",
       "body": ["dint_to_string(${1:})"],
       "description": "Convert double int to string"
+    },
+    "dint_to_wstring":{
+      "prefix":"di2ws",
+      "body": ["dint_to_wstring(${1:})"],
+      "description": "Convert double int to wstring"
     },
     "dint_to_word":{
       "prefix":"di2w",
@@ -315,6 +325,11 @@
       "body": ["int_to_string(${1:})"],
       "description": "Convert int to string"
     },
+    "int_to_wstring":{
+      "prefix":"i2ws",
+      "body": ["int_to_wstring(${1:})"],
+      "description": "Convert int to wstring"
+    },
     "real_to_dint":{
       "prefix":"r2di",
       "body": ["real_to_dint(${1:})"],
@@ -334,6 +349,11 @@
       "prefix":"r2s",
       "body": ["real_to_string(${1:})"],
       "description": "Convert real to string"
+    },
+    "real_to_wstring":{
+      "prefix":"r2ws",
+      "body": ["real_to_wstring(${1:})"],
+      "description": "Convert real to wstring"
     },
     "string_to_char":{
       "prefix":"s2c",
