@@ -405,7 +405,7 @@
       "body": ["string_to_lreal(${1:})"],
       "description": "Convert string to long real"
     },
-    "string_to_string":{
+    "string_to_wstring":{
       "prefix":"s2ws",
       "body": ["string_to_wstring(${1:})"],
       "description": "Convert string to wstring"
