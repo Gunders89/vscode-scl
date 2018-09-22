@@ -163,7 +163,11 @@
 					"name":"support.function.scl"
 				},
 				{
-					"match":"(?i)\\b(string_to_char|string_to_int|string_to_dint|string_to_real|string_to_wstring)\\b",
+					"match":"(?i)\\b(string_to_char|string_to_wchar|string_to_int|string_to_lint|string_to_uint|string_to_usint|string_to_dint|string_to_udint|string_to_real|string_lreal|string_to_wstring)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(wstring_to_char|wstring_to_wchar|wstring_to_int|wstring_to_lint|wstring_to_uint|wstring_to_usint|wstring_to_dint|wstring_to_udint|wstring_to_real|wstring_to_lreal|wstring_to_string)\\b",
 					"name":"support.function.scl"
 				},
 				{

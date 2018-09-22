@@ -219,7 +219,7 @@
       "prefix":"di2i",
       "body": ["dint_to_int(${1:})"],
       "description": "Convert double int to int"
-    },    
+    },
     "dint_to_time":{
       "prefix":"di2t",
       "body": ["dint_to_time(${1:})"],
@@ -360,20 +360,115 @@
       "body": ["string_to_char(${1:})"],
       "description": "Convert string to char"
     },
+    "string_to_wchar":{
+      "prefix":"s2wc",
+      "body": ["string_to_wchar(${1:})"],
+      "description": "Convert string to wchar"
+    },
     "string_to_int":{
       "prefix":"s2i",
       "body": ["string_to_int(${1:})"],
       "description": "Convert string to int"
+    },
+    "string_to_lint":{
+      "prefix":"s2li",
+      "body": ["string_to_lint(${1:})"],
+      "description": "Convert string to long int"
+    },
+    "string_to_uint":{
+      "prefix":"s2ui",
+      "body": ["string_to_uint(${1:})"],
+      "description": "Convert string to unsigned int"
+    },
+    "string_to_usint":{
+      "prefix":"s2usi",
+      "body": ["string_to_usint(${1:})"],
+      "description": "Convert string to unsigned short int"
     },
     "string_to_dint":{
       "prefix":"s2di",
       "body": ["string_to_dint(${1:})"],
       "description": "Convert string to double int"
     },
+    "string_to_udint":{
+      "prefix":"s2udi",
+      "body": ["string_to_udint(${1:})"],
+      "description": "Convert string to unsigned double int"
+    },
     "string_to_real":{
       "prefix":"s2r",
       "body": ["string_to_real(${1:})"],
       "description": "Convert string to real"
+    },
+    "string_to_lreal":{
+      "prefix":"s2lr",
+      "body": ["string_to_lreal(${1:})"],
+      "description": "Convert string to long real"
+    },
+    "string_to_string":{
+      "prefix":"s2ws",
+      "body": ["string_to_wstring(${1:})"],
+      "description": "Convert string to wstring"
+    },
+    "wstring_to_char":{
+      "prefix":"ws2c",
+      "body": ["wstring_to_char(${1:})"],
+      "description": "Convert wstring to char"
+    },
+    "wstring_to_wchar":{
+      "prefix":"ws2wc",
+      "body": ["wstring_to_wchar(${1:})"],
+      "description": "Convert wstring to wchar"
+    },
+    "wstring_to_int":{
+      "prefix":"ws2i",
+      "body": ["wstring_to_int(${1:})"],
+      "description": "Convert wstring to int"
+    },
+    "wstring_to_lint":{
+      "prefix":"ws2li",
+      "body": ["wstring_to_lint(${1:})"],
+      "description": "Convert wstring to long int"
+    },
+    "wstring_to_sint":{
+      "prefix":"ws2i",
+      "body": ["wstring_to_sint(${1:})"],
+      "description": "Convert wstring to short int"
+    },
+    "wstring_to_uint":{
+      "prefix":"ws2ui",
+      "body": ["wstring_to_uint(${1:})"],
+      "description": "Convert wstring to unsigned int"
+    },
+    "wstring_to_usint":{
+      "prefix":"ws2usi",
+      "body": ["wstring_to_usint(${1:})"],
+      "description": "Convert wstring to unsigned short int"
+    },
+    "wstring_to_dint":{
+      "prefix":"ws2di",
+      "body": ["wstring_to_dint(${1:})"],
+      "description": "Convert wstring to double int"
+    },
+    "wstring_to_udint":{
+      "prefix":"ws2udi",
+      "body": ["wstring_to_udint(${1:})"],
+      "description": "Convert wstring to unsigned double int"
+    },
+    "wstring_to_real":{
+      "prefix":"ws2r",
+      "body": ["wstring_to_real(${1:})"],
+      "description": "Convert wstring to real"
+    },
+    "wstring_to_lreal":{
+      "prefix":"ws2lr",
+      "body": ["wstring_to_lreal(${1:})"],
+      "description": "Convert wstring to lreal"
+    },
+    "wstring_to_string":{
+      "prefix":"ws2s",
+      "body": ["wstring_to_lreal(${1:})"],
+      "description": "Convert wstring to string"
     },
     "time_to_dint":{
       "prefix":"t2di",
