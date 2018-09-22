@@ -42,6 +42,7 @@ There are snippets included in this extension. To use them, type the prefixes li
 |w2\<x\>    |Convert word to x          |
 |db2\<x\>   |Convert block DB to x      |
 |bcd2\<x\>  |Convert bcd to x           |
+|ws2\<x\>   |Convert wstring to x       |
 
 
 In addition a lot of the S7_xx-attributes has been added as snippets, with descriptions. Most likely some are still missing. Let me know if you are missing some, or if you find any misspellings.

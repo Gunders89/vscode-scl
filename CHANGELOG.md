@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to the "scl" extension will be documented in this file.
 
+## [0.0.9]
+- wstring conversions added (by d-ani)
+
 ## [0.0.8]
 - Added Class A conversions to snippets and highlighting
 
