@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to the "scl" extension will be documented in this file.
 
+## [0.0.10]
+- Bugfix wstring_to_sint
+
 ## [0.0.9]
 - wstring conversions added (by d-ani)
 

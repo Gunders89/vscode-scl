@@ -431,7 +431,7 @@
       "description": "Convert wstring to long int"
     },
     "wstring_to_sint":{
-      "prefix":"ws2i",
+      "prefix":"ws2si",
       "body": ["wstring_to_sint(${1:})"],
       "description": "Convert wstring to short int"
     },
