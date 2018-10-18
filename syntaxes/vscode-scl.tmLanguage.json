@@ -22,7 +22,7 @@
 				},
 				{
 					"name": "keyword.control.scl",
-					"match": "(?i)\\b(var|var_input|var_output|var_in_out|var_temp|end_var|begin|const|end_const|type|end_type)\\b"			
+					"match": "(?i)\\b(var[\\s\\r\\n]+constant|var|var_input|var_output|var_in_out|var_temp|end_var|begin|const|end_const|type|end_type)\\b"			
 				},
 				{
 					"name": "keyword.control.scl",
@@ -99,7 +99,7 @@
 		"support":{
 			"patterns": [
 				{
-					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|INT|DINT|DT|DWORD|POINTER|REAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|UINT|VOID|WORD|WSTRING)\\b",
+					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|SINT|SINT|INT|DINT|LINT|DT|DWORD|POINTER|REAL|LREAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|USINT|UINT|UDINT|ULINT|VOID|WORD|WSTRING)\\b",
 					"name": "support.class.scl"
 				},
 				{
@@ -147,7 +147,11 @@
 					"name":"support.function.scl"
 				},
 				{
-					"match":"(?i)\\b(dint_to_date|dint_to_dword|dint_to_int|dint_to_time|dint_to_tod|dint_to_bool|dint_to_byte|dint_to_real|dint_to_string|dint_to_wstring|dint_to_word|dint_to_bcd|dint_to_bcd_dword)\\b",
+					"match":"(?i)\\b(dint_to_bool|dint_to_byte|dint_to_word|dint_to_dword|dint_to_lword|dint_to_sint|dint_to_usint|dint_to_int|dint_to_uint|dint_to_udint|dint_to_ulint|dint_to_real|dint_to_lreal|dint_to_time|dint_to_ltime|dint_to_ldt|dint_to_tod|dint_to_ltod|dint_to_date|dint_to_string|dint_to_wstring|dint_to_char|dint_to_wchar|dint_to_bcd32|dint_to_bcd32_dword)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(udint_to_bool|udint_to_byte|udint_to_word|udint_to_dword|udint_to_lword|udint_to_sint|udint_to_usint|udint_to_int|udint_to_uint|udint_to_dint|udint_to_ulint|udint_to_real|udint_to_lreal|udint_to_time|udint_to_ltime|udint_to_ldt|udint_to_tod|udint_to_ltod|udint_to_date|udint_to_string|udint_to_wstring|udint_to_char|udint_to_wchar|udint_to_bcd32|udint_to_bcd32_dword)\\b",
 					"name":"support.function.scl"
 				},
 				{
@@ -155,11 +159,31 @@
 					"name":"support.function.scl"
 				},
 				{
-					"match":"(?i)\\b(int_to_char|int_to_word|int_to_byte|int_to_dint|int_to_dword|int_to_real|int_to_string|int_to_wstring|int_to_bcd|int_to_bcd_word)\\b",
+					"match":"(?i)\\b(sint_to_bool|sint_to_byte|sint_to_word|sint_to_dword|sint_to_lword|sint_to_usint|sint_to_int|sint_to_uint|sint_to_dint|sint_to_udint|sint_to_ulint|sint_to_real|sint_to_lreal|sint_to_time|sint_to_ltime|sint_to_ldt|sint_to_tod|sint_to_ltod|sint_to_date|sint_to_string|sint_to_wstring|sint_to_char|sint_to_wchar)\\b",
 					"name":"support.function.scl"
 				},
 				{
-					"match":"(?i)\\b(real_to_dint|real_to_dword|real_to_int|real_to_string|real_to_wstring)\\b",
+					"match":"(?i)\\b(usint_to_bool|usint_to_byte|usint_to_word|usint_to_dword|usint_to_lword|usint_to_sint|usint_to_int|usint_to_uint|usint_to_dint|usint_to_udint|usint_to_ulint|usint_to_real|usint_to_lreal|usint_to_time|usint_to_ltime|usint_to_ldt|usint_to_tod|usint_to_ltod|usint_to_date|usint_to_string|usint_to_wstring|usint_to_char|usint_to_wchar)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(int_to_bool|int_to_byte|int_to_word|int_to_dword|int_to_lword|int_to_sint|int_to_usint|int_to_uint|int_to_dint|int_to_udint|int_to_ulint|int_to_real|int_to_lreal|int_to_time|int_to_ltime|int_to_ldt|int_to_tod|int_to_ltod|int_to_date|int_to_string|int_to_wstring|int_to_char|int_to_wchar)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(uint_to_bool|uint_to_byte|uint_to_word|uint_to_dword|uint_to_lword|uint_to_sint|uint_to_usint|uint_to_int|uint_to_dint|uint_to_udint|uint_to_ulint|uint_to_real|uint_to_lreal|uint_to_time|uint_to_ltime|uint_to_ldt|uint_to_tod|uint_to_ltod|uint_to_date|uint_to_string|uint_to_wstring|uint_to_char|uint_to_wchar)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(lint_to_bool|lint_to_byte|lint_to_word|lint_to_dword|lint_to_lword|lint_to_sint|lint_to_usint|lint_to_int|lint_to_uint|lint_to_dint|lint_to_udint|lint_to_ulint|lint_to_real|lint_to_lreal|lint_to_time|lint_to_ltime|lint_to_ldt|lint_to_tod|lint_to_date|lint_to_string|lint_to_wstring|lint_to_char|lint_to_wchar)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(real_to_dword|real_to_sint|real_to_usint|real_to_int|real_to_uint|real_to_dint|real_to_udint|real_to_lint|real_to_ulint|real_to_lreal|real_to_string|real_to_wstring)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(lreal_to_lword|lreal_to_sint|lreal_to_usint|lreal_to_int|lreal_to_uint|lreal_to_dint|lreal_to_udint|lreal_to_ulint|lreal_to_real|lreal_to_lreal|lreal_to_string|lreal_to_wstring)\\b",
 					"name":"support.function.scl"
 				},
 				{
