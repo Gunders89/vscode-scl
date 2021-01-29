@@ -128,8 +128,8 @@
     "Create a Region":{
         "prefix": "region",
         "body": [
-            "REGION {$1:_region_name_}",
-            "\t{$2:_body_}",
+            "REGION ${1:_region_name_}",
+            "\t${2:_body_}",
             "END_REGION"
         ],
         "description" : "Variable AT instruction"
