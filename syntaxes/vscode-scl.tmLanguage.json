@@ -18,7 +18,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.scl",
-					"match": "(?i)\\b(break|case|end_case|continue|do|to|else|elsif|AT|for|end_for|goto|if|end_if|return|of|while|end_while|then|repeat|until|end_repeat|exit|label|end_label)\\b"
+					"match": "(?i)\\b(break|case|end_case|continue|do|to|else|elsif|AT|for|end_for|goto|if|end_if|return|of|while|end_while|then|repeat|until|end_repeat|exit|label|end_label|REGION|END_REGION)\\b"
 				},
 				{
 					"name": "keyword.control.scl",
