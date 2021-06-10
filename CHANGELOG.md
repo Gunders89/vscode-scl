@@ -1,5 +1,8 @@
 # Change Log
 All notable changes to the "scl" extension will be documented in this file.
+## [latest]
+- Merged pull requests with snippets for more conversions
+- Merged pull requests with snippets for region
 
 ## [0.0.10]
 - Bugfix wstring_to_sint
