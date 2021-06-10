@@ -797,6 +797,46 @@
       "body": "S7_qc",
       "description" : "This attribute identifies parameters which provide the quality code in addition to the process value"
     },
+    "S7_xarchive":{
+      "prefix": "S7_xarchive",
+      "body" : "S7_xarchive",
+      "description" : "Process values that are archived at runtime. Refers to elements whitin a structure"
+    },
+    "S7_xedit":{
+      "prefix": "S7_xedit",
+      "body" : "S7_xedit",
+      "description" : "Include the parameter in the Edit parameters/signals table for editing in Manager without opening the CFC chart. Refers to elements whitin a structure"
+    },
+    "S7_xm_c":{
+      "prefix": "S7_xm_c",
+      "body": "S7_xm_c",
+      "description":"Defines whether the operator can control and monitor the parameter at an OS. Refers to elements whitin a structure"
+    },
+    "S7_xshortcut":{
+      "prefix": "S7_xshortcut",
+      "body": "S7_xshortcut",
+      "description": "Contains the parameter name with a maximum string length of 16 characters. Refers to elements whitin a structure"
+    },
+    "S7_xstring_0":{
+      "prefix": "S7_xstring_0",
+      "body": "S7_xstring_0",
+      "description" : "Operator text \"0\" for binary values. Refers to elements whitin a structure"
+    },
+    "S7_xstring_1":{
+      "prefix": "S7_xstring_1",
+      "body": "S7_xstring_1",
+      "description" : "Operator text \"1\" for binary values. Refers to elements whitin a structure"
+    },
+    "S7_xtrend":{
+      "prefix": "S7_xtrend",
+      "body": "S7_xtrend",
+      "description": "Sets the assignment to the block inputs used as limit values. Refers to elements whitin a structure"
+    },
+    "S7_xqc":{
+      "prefix": "S7_xqc",
+      "body": "S7_xqc",
+      "description" : "This attribute identifies parameters which provide the quality code in addition to the process value. Refers to elements whitin a structure"
+    },
 
 
 
