@@ -125,6 +125,15 @@
         ],
         "description" : "Variable AT instruction"
     },
+    "Create a Region":{
+        "prefix": "region",
+        "body": [
+            "REGION ${1:_region_name_}",
+            "\t${2:_body_}",
+            "END_REGION"
+        ],
+        "description" : "Variable AT instruction"
+    },
     "bool_to_byte":{
       "prefix":"bo2b",
       "body": ["bool_to_byte(${1:})"],
