@@ -1,7 +1,10 @@
 # Change Log
 All notable changes to the "scl" extension will be documented in this file.
 
-## [latest]
+## [Latest]
+- Merged highlighting fix of region names
+
+## [0.0.20]
 - Added missing system attributes
 
 ## [0.0.19]
