@@ -3,14 +3,14 @@
 	"name": "Siemens SCL",
 	"patterns": [
 		{ "include": "#comments"},
+		{ "include": "#section" },
 		{ "include": "#keywords" },
 		{ "include": "#strings" },
 		{ "include": "#operators" },
 		{ "include": "#storage"	},
 		{ "include": "#constants" },
 		{ "include": "#support"	},
-		{ "include": "#punctuations" },
-		{ "include": "#section" }
+		{ "include": "#punctuations" }
 
 	],
 	"repository": {
@@ -282,8 +282,18 @@
 		"section":{
 			"patterns":[
 				{
-					"match": "(?i)\\b(region|end_region)\\b",
-					"name": "entity.name.section.scl"					
+					"captures": {
+						"1": { "name": "keyword.other.region.scl"},
+						"2": { "name": "string.unquoted.scl"}
+					},
+					"match": "(?i)\\b(region)\\b(.*)$\\n?"
+				},
+				{
+					"captures": {
+						"1": { "name": "keyword.other.endregion.scl"},
+						"2": { "name": "string.unquoted.scl"}
+					},
+					"match": "(?i)\\b(end_region)\\b(.*)$\\n?"
 				}
 			]
 		},
