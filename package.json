@@ -3,7 +3,7 @@
     "displayName": "Siemens SCL syntex highlight",
     "description": "Siemens SCL language support for Visual Studio Code, based on Gunders89 code",
     "icon": "images/sclIcon.png",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "publisher": "sikilde",
     "engines": {
         "vscode": "^1.81.1"
