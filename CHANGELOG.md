@@ -3,6 +3,10 @@ All notable changes to the "scl" extension will be documented in this file.
 
 ## [Latest]
 - Merged highlighting fix of region names
+- Fixed bug where escaped singel qoute in string broke the string highlighting
+
+## [0.0.21]
+- Merged highlighting fix of region names
 
 ## [0.0.20]
 - Added missing system attributes
