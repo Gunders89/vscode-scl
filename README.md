@@ -2,8 +2,10 @@
 
 Siemens SCL language support for Visual Studio Code.
 
+This code is forked from [gunders89's outdated version](https://github.com/Gunders89/vscode-scl).
+
 ## Download
-Download this extension through Visual Studio Code (search in Extensions), or click this [link](https://marketplace.visualstudio.com/items?itemName=Gunders89.vscode-scl).
+Download this extension through Visual Studio Code (search in Extensions), or click this [link](https://marketplace.visualstudio.com/items?itemName=sikilde.vscode-siemens-scl).
 
 ## Features
 
@@ -51,4 +53,6 @@ In addition a lot of the S7_xx-attributes has been added as snippets, with descr
 ## Contributions
 
 Contributions are greatly appreciated. Please fork this repository and open a pull request to add snippets, make grammar changes, etc.
+
+All credits to [gunders89](https://github.com/Gunders89/).
 
