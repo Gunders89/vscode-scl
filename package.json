@@ -1,9 +1,9 @@
 {
     "name": "vscode-siemens-scl",
-    "displayName": "Siemens SCL, based on gunders89's outdated code",
-    "description": "Siemens SCL language support for Visual Studio Code, based on gunders89 code",
+    "displayName": "Siemens SCL syntex highlight",
+    "description": "Siemens SCL language support for Visual Studio Code, based on Gunders89 code",
     "icon": "images/sclIcon.png",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "publisher": "sikilde",
     "engines": {
         "vscode": "^1.81.1"
