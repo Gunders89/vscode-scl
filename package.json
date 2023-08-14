@@ -28,7 +28,8 @@
                 "extensions": [
                     "scl",
                     "SCL",
-                    "udt"
+                    "udt",
+                    "db"
                 ],
                 "configuration": "./language-configuration.json"
             }

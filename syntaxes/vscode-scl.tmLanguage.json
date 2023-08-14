@@ -34,7 +34,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.scl",
-					"match": "!|\\$|\\&|<\\=|>\\=|<>|<|>|(\\*\\*)|(\\=\\=)|!|\\&\\&|\\*|\\/|\\-|\\+|:|\\=|\\#|\\b(void)\\b"
+					"match": "!|\\$|\\&|<\\=|>\\=|<>|<|>|(\\*\\*)|(\\=\\=)|!|\\&\\&|\\*|\\/|\\-|\\+|:|\\=|\\b(void)\\b"
 				},
 				{
 					"name": "keyword.control.assignment.scl",
@@ -43,6 +43,14 @@
 				{
 					"name": "keyword.control.scl",
 					"match": "(?i)\\b(and|or|xor|not)\\b"
+				},
+				{
+					"name": "constant.regexp.scl",
+					"match": "([^Tt])\\K\\#.\\w*(?!\\()\\b[.][%]\\w.*?\\b|([^Tt])\\K\\#.\\w*(?!\\()\\b"
+				},
+				{
+					"name": "constant.regexp.scl",
+					"match": "([^Tt])\\K\\#.\\w*(?!\\()\\b[.]\\w.*?\\b"
 				}
 			]
 
@@ -91,7 +99,7 @@
 					"name": "storage.type.function.scl"
 				},
 				{
-					"match": "(\"(\\w+?)\")",
+					"match": "(\"(\\w+?)\")|\\#.*\\[\\d\\]|\\#\\w*(?=\\()",
 					"name": "entity.name.function.scl"					
 				}
 			]	
@@ -306,14 +314,10 @@
 			]
 		},
 		"strings": {
-			"name": "string.quoted.single.scl",
-			"begin": "'",
-			"while": "$'",
-			"end": "'",
 			"patterns": [
 				{
 					"name": "constant.character.escape.scl",
-					"match": "\\\\."
+					"match": "\\B(\\'.*?\\')\\B"
 				}
 			]
 		}
