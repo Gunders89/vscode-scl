@@ -1,6 +1,6 @@
 {
     "name": "vscode-siemens-scl",
-    "displayName": "Siemens SCL",
+    "displayName": "Siemens SCL, based on gunders89's outdated code",
     "description": "Siemens SCL language support for Visual Studio Code, based on gunders89 code",
     "icon": "images/sclIcon.png",
     "version": "0.2.0",
