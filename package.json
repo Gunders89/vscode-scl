@@ -6,7 +6,7 @@
     "version": "0.2.0",
     "publisher": "sikilde",
     "engines": {
-        "vscode": "^2.0.0"
+        "vscode": "^1.81.1"
     },
     "categories": [
         "Programming Languages"
