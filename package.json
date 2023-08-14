@@ -3,7 +3,7 @@
     "displayName": "Siemens SCL, based on gunders89's outdated code",
     "description": "Siemens SCL language support for Visual Studio Code, based on gunders89 code",
     "icon": "images/sclIcon.png",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "publisher": "sikilde",
     "engines": {
         "vscode": "^1.81.1"
