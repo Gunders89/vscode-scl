@@ -101,6 +101,24 @@
 				{
 					"match": "(\"(\\w+?)\")|\\#.*\\[\\d\\]|\\#\\w*(?=\\()",
 					"name": "entity.name.function.scl"					
+				},
+
+				{
+					"captures": {
+						"1": { "name": "storage.type.function.scl"},
+						"2": { "name": "entity.name.function.scl"},
+						"3": { "name": "entity.name.function.scl"}
+					},
+					"match": "(?i)\\b(data_block)\\s+(\"(\\w*)\")?",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"match": "(?i)\\b(END_DATA_BLOCK)\\b",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"match": "(\"(\\w+?)\")|\\#.*\\[\\d\\]|\\#\\w*(?=\\()",
+					"name": "entity.name.function.scl"					
 				}
 			]	
 		},
