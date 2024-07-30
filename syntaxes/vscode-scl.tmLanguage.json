@@ -154,6 +154,26 @@
                     "name": "support.variable.scl"
                 },
                 {
+                    "match": "(?i)(externalaccessible)",
+                    "name": "support.variable.scl"
+                },
+                {
+                    "match": "(?i)(externalvisible)",
+                    "name": "support.variable.scl"
+                },
+                {
+                    "match": "(?i)(externalwritable)",
+                    "name": "support.variable.scl"
+                },
+                {
+                    "match": "(?i)(instructionname)",
+                    "name": "support.variable.scl"
+                },
+                {
+                    "match": "(?i)(LibVersion)",
+                    "name": "support.variable.scl"
+                },
+                {
                     "match": "(?i)\\b(TIME_TCK)\\b",
                     "name": "support.function.scl"
                 },
