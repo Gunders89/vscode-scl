@@ -276,6 +276,14 @@
 					},
 					"match": "(//).*$\\n?",
 					"name": "comment.line.double-slash.scl"
+				},
+				{
+					"captures": {
+						"2": { "name": "punctuation.definition.comment.scl"}
+					},
+					"begin": "\\(\/\\*",
+					"end": "\\*\/\\)",
+					"name": "comment.multilangblock.scl"
 				}
 			]
 		},
