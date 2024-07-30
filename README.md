@@ -54,5 +54,5 @@ In addition a lot of the S7_xx-attributes has been added as snippets, with descr
 
 Contributions are greatly appreciated. Please fork this repository and open a pull request to add snippets, make grammar changes, etc.
 
-All credits to [gunders89](https://github.com/Gunders89/).
+Credits to [gunders89](https://github.com/Gunders89/).
 

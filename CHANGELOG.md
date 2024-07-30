@@ -2,6 +2,9 @@
 All notable changes to the "scl" extension will be documented in this file.
 
 ## [Latest]
+- More syntax highlighitng fixes
+
+## [0.2.8]
 - Merged highlighting fix of region names
 - Fixed bug where escaped singel qoute in string broke the string highlighting
 - Merged jbradshaw14's fix for timers and local variables
