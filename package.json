@@ -28,7 +28,9 @@
                 "extensions": [
                     "scl",
                     "SCL",
-                    "udt"
+                    "udt",
+                    "TcPOU",
+                    "TcGVL"
                 ],
                 "configuration": "./language-configuration.json"
             }
