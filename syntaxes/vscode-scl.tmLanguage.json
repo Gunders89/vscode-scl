@@ -60,6 +60,14 @@
                 {
                     "name": "keyword.control.scl",
                     "match": "(?i)\\b(and|or|xor|not)\\b"
+                },
+                {
+                    "name": "constant.regexp.scl",
+                    "match": "\\#.\\w*(?!\\()\\b[.]\\w.*?\\b|\\#.\\w*(?!\\()\\b|\\.\\w*|\\.\\w*"
+                },
+                {
+                    "name": "constant.regexp.scl",
+                    "match": "(^ (\\s*\\w*?) (?=:))|(^(\\s*\\w*?) )(?={)"
                 }
             ]
         },
