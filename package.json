@@ -6,7 +6,7 @@
     "version": "0.2.8",
     "publisher": "sikilde",
     "engines": {
-        "vscode": "^1.20.0"
+        "vscode": "^1.81.1"
     },
     "categories": [
         "Programming Languages"
@@ -38,13 +38,13 @@
             {
                 "language": "siemensscl",
                 "scopeName": "source.scl",
-                "path": "./syntaxes/vscode-scl.tmLanguage.json"
+                "path": "./syntaxes/vscode-siemens-scl.tmLanguage.json"
             }
         ],
         "snippets": [
             {
                 "language": "siemensscl",
-                "path": "./snippets/vscode-scl.json"
+                "path": "./snippets/vscode-siemens-scl.json"
             }
         ]
     }
