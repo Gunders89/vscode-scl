@@ -268,6 +268,22 @@
                 {
                     "match": "(?i)\\b(dword_bcd_to_dint)\\b",
                     "name": "support.function.scl"
+                },
+                {
+                    "match": "(?i)\\b(concat)\\b",
+                    "name": "support.function.scl"
+                },
+                {
+                    "match": "(?i)\\b(upper_bound)\\b",
+                    "name": "support.function.scl"
+                },
+                {
+                    "match": "(?i)\\b(lower_bound)\\b",
+                    "name": "support.function.scl"
+                },
+                {
+                    "match": "(?i)\\b(len)\\b",
+                    "name": "support.function.scl"
                 }
             ]
         },
