@@ -1,6 +1,11 @@
 # README
 
 Siemens SCL language support for Visual Studio Code.
+The syntax highlighting (and most snippets) work for other IEC 61131-3 StructuredText variants as well. However, it has not been tailored to every flavor of ST.
+
+### Good alternatives to this extension if general ST support is required
+ - [Cloud-based IEC 61131-3 Development Environment](https://marketplace.visualstudio.com/items?itemName=david9991.plcc-plugin) by [david9991](https://github.com/david9991/plcc-plugin)
+ - [Structured Text language Support](https://marketplace.visualstudio.com/items?itemName=Serhioromano.vscode-st) by [Serhioromano](https://github.com/Serhioromano/vscode-st)
 
 ## Download
 Download this extension through Visual Studio Code (search in Extensions), or click this [link](https://marketplace.visualstudio.com/items?itemName=Gunders89.vscode-scl).
