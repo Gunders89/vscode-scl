@@ -2,6 +2,9 @@
 All notable changes to the "scl" extension will be documented in this file.
 
 ## [Latest]
+- Reverted "fix for a bug where escaped singel qoute in string broke the string highlighting"
+
+## [0.1.0]
 - Merged sikilde's fix for a bug where escaped singel qoute in string broke the string highlighting
 - Merged sikilde's milty language comment block pattern
 - Merged jbradshaw14's fix for timers and local variables
