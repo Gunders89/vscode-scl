@@ -308,7 +308,6 @@
 		"strings": {
 			"name": "string.quoted.single.scl",
 			"begin": "'",
-			"while": "$'",
 			"end": "'",
 			"patterns": [
 				{
