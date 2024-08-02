@@ -272,7 +272,7 @@
 				},
 				{
 					"match": "(?i)\\bnull\\b",
-					"name": "constant.language.null"
+					"name": "constant.language.null.scl"					
 				}
 			]
 		},
