@@ -2,6 +2,16 @@
 All notable changes to the "scl" extension will be documented in this file.
 
 ## [Latest]
+Mostly additions from Sikilde
+- Added support for escaping strings with both `$` and `\`
+- Fixed function block support
+- Added data_block support
+- Added datatypes ton_time, tof_time, tp_time and iec_timer
+- Added recognition of local variables starting with `#`
+- Added recognition of variable in declaration 
+- Added .db file extension support
+
+## [0.1.1]
 - Reverted "fix for a bug where escaped singel qoute in string broke the string highlighting"
 
 ## [0.1.0]
