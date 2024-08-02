@@ -2,6 +2,12 @@
 All notable changes to the "scl" extension will be documented in this file.
 
 ## [Latest]
+- Added DTL and ENO to datatypes
+- Added highlighting of some more key words
+- Added highlighting of some functions
+- Added highlighting of null
+
+## [0.2.0]
 Mostly additions from Sikilde
 - Added support for escaping strings with both `$` and `\`
 - Fixed function block support
