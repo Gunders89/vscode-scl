@@ -301,8 +301,8 @@
 					"captures": {
 						"2": { "name": "punctuation.definition.comment.scl"}
 					},
-					"begin": "\\(/\\*",
-					"end": "\\*/\\)",
+					"begin": "\\(\\/\\*",
+					"end": "\\*\\/\\)",
 					"name": "comment.multilangblock.scl"
 				}
 			]
