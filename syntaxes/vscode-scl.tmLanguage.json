@@ -269,6 +269,10 @@
 				{
 					"match": "(?i)\\bfalse\\b",
 					"name": "constant.language.boolean.false.scl"					
+				},
+				{
+					"match": "(?i)\\bnull\\b",
+					"name": "constant.language.null"
 				}
 			]
 		},
