@@ -30,7 +30,8 @@
                     "SCL",
                     "udt",
                     "TcPOU",
-                    "TcGVL"
+                    "TcGVL",
+                    "db"
                 ],
                 "configuration": "./language-configuration.json"
             }
