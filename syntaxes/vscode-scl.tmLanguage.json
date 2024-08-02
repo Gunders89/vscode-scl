@@ -34,7 +34,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.scl",
-					"match": "!|\\$|\\&|<\\=|>\\=|<>|<|>|(\\*\\*)|(\\=\\=)|!|\\&\\&|\\*|\\/|\\-|\\+|:|\\=|\\#|\\b(void)\\b"
+					"match": "!|\\$|\\&|<\\=|>\\=|<>|<|>|(\\*\\*)|(\\=\\=)|!|\\&\\&|\\*|\\/|\\-|\\+|:|\\=|\\b(void)\\b"
 				},
 				{
 					"name": "keyword.control.assignment.scl",
@@ -43,11 +43,17 @@
 				{
 					"name": "keyword.control.scl",
 					"match": "(?i)\\b(and|or|xor|not)\\b"
+				},
+				{
+					"name": "constant.regexp.scl",
+					"match": "\\#.\\w*(?!\\()\\b[.]\\w.*?\\b|\\#\\D.\\w*(?!\\()\\b|\\.\\w*|\\.\\w*"
+				},
+				{
+					"name": "constant.regexp.scl",
+					"match": "(^ (\\s*\\w*?) (?=:))|(^(\\s*\\w*?) )(?={)"
 				}
 			]
-
 		},
-						
 		"storage": {
 			"patterns": [
 				{
@@ -91,15 +97,28 @@
 					"name": "storage.type.function.scl"
 				},
 				{
-					"match": "(\"(\\w+?)\")",
+					"match": "(\"(\\w+?)\")|\\#.*\\[\\d\\]|\\#\\w*(?=\\()",
 					"name": "entity.name.function.scl"					
+				},
+				{
+					"captures": {
+						"1": {"name": "storage.type.function.scl"},
+						"2": {"name": "entity.name.function.scl"},
+						"3": {"name": "entity.name.function.scl"}
+					},
+					"match": "(?i)\\b(data_block)\\s+(\"(\\w*)\")?",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"match": "(?i)\\b(END_DATA_BLOCK)\\b",
+					"name": "storage.type.function.scl"
 				}
 			]	
 		},
 		"support":{
 			"patterns": [
 				{
-					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|SINT|SINT|INT|DINT|LINT|DT|DWORD|POINTER|REAL|LREAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|USINT|UINT|UDINT|ULINT|VOID|WORD|WSTRING)\\b",
+					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|SINT|SINT|INT|DINT|LINT|DT|DWORD|POINTER|REAL|LREAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|USINT|UINT|UDINT|ULINT|VOID|WORD|WSTRING|TON_TIME|TOF_TIME|TP_TIME)\\b",
 					"name": "support.class.scl"
 				},
 				{
@@ -281,8 +300,8 @@
 					"captures": {
 						"2": { "name": "punctuation.definition.comment.scl"}
 					},
-					"begin": "\\(\/\\*",
-					"end": "\\*\/\\)",
+					"begin": "\\(/\\*",
+					"end": "\\*/\\)",
 					"name": "comment.multilangblock.scl"
 				}
 			]
@@ -312,7 +331,7 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.scl",
-					"match": "\\\\."
+					"match": "'[^'\\$]*(?:\\$[\\s\\S][^'\\$]*)*'"
 				}
 			]
 		}
