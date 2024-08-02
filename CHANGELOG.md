@@ -2,12 +2,14 @@
 All notable changes to the "scl" extension will be documented in this file.
 
 ## [Latest]
-- More syntax highlighitng fixes
+- Reverted "fix for a bug where escaped singel qoute in string broke the string highlighting"
 
-## [0.2.8]
-- Merged highlighting fix of region names
-- Fixed bug where escaped singel qoute in string broke the string highlighting
+## [0.1.0]
+- Merged sikilde's fix for a bug where escaped singel qoute in string broke the string highlighting
+- Merged sikilde's milty language comment block pattern
 - Merged jbradshaw14's fix for timers and local variables
+- Added TcPOU and TcGVL (TwinCAT) file extensions to allow for syntax highlighting of the ST in the files (does not support the xml-wrapper)
+- Added updates to readme
 
 ## [0.0.21]
 - Merged highlighting fix of region names

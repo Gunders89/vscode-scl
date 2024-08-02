@@ -1,21 +1,21 @@
 {
-    "name": "vscode-siemens-scl",
-    "displayName": "Siemens SCL syntax highlight",
-    "description": "Siemens SCL language support for Visual Studio Code, based on Gunders89 code",
+    "name": "vscode-scl",
+    "displayName": "Siemens SCL",
+    "description": "Siemens SCL language support for Visual Studio Code",
     "icon": "images/sclIcon.png",
-    "version": "0.2.9",
-    "publisher": "sikilde",
+    "version": "0.1.1",
+    "publisher": "Gunders89",
     "engines": {
-        "vscode": "^1.81.1"
+        "vscode": "^1.20.0"
     },
     "categories": [
         "Programming Languages"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/sikilde/vscode-scl.git"
+        "url": "https://github.com/Gunders89/vscode-scl.git"
     },
-    "homepage": "https://github.com/sikilde/vscode-scl/blob/master/README.md",
+    "homepage": "https://github.com/Gunders89/vscode-scl/blob/master/README.md",
     "contributes": {
         "languages": [
             {
@@ -29,7 +29,8 @@
                     "scl",
                     "SCL",
                     "udt",
-                    "db"
+                    "TcPOU",
+                    "TcGVL"
                 ],
                 "configuration": "./language-configuration.json"
             }
@@ -38,13 +39,13 @@
             {
                 "language": "siemensscl",
                 "scopeName": "source.scl",
-                "path": "./syntaxes/vscode-siemens-scl.tmLanguage.json"
+                "path": "./syntaxes/vscode-scl.tmLanguage.json"
             }
         ],
         "snippets": [
             {
                 "language": "siemensscl",
-                "path": "./snippets/vscode-siemens-scl.json"
+                "path": "./snippets/vscode-scl.json"
             }
         ]
     }
