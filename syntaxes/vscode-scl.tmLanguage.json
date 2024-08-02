@@ -10,7 +10,8 @@
 		{ "include": "#storage"	},
 		{ "include": "#constants" },
 		{ "include": "#support"	},
-		{ "include": "#punctuations" }
+		{ "include": "#punctuations" },
+		{ "include": "#variables" }
 
 	],
 	"repository": {
@@ -45,11 +46,11 @@
 					"match": "(?i)\\b(and|or|xor|not)\\b"
 				},
 				{
-					"name": "constant.regexp.scl",
+					"name": "variable.regexp.scl",
 					"match": "\\#.\\w*(?!\\()\\b[.]\\w.*?\\b|\\#\\D.\\w*(?!\\()\\b|\\.\\w*|\\.\\w*"
 				},
 				{
-					"name": "constant.regexp.scl",
+					"name": "variable.regexp.scl",
 					"match": "(^ (\\s*\\w*?) (?=:))|(^(\\s*\\w*?) )(?={)"
 				}
 			]
