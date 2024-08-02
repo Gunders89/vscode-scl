@@ -241,6 +241,22 @@
 				{
 					"match":"(?i)\\b(dword_bcd_to_dint)\\b",
 					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(VAL_STRG)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(STRG_VAL)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(S_CONV)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(CONCAT)\\b",
+					"name":"support.function.scl"
 				}
 			]
 		},
