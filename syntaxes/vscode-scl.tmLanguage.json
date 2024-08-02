@@ -119,7 +119,7 @@
 		"support":{
 			"patterns": [
 				{
-					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|SINT|SINT|INT|DINT|LINT|DT|DWORD|POINTER|REAL|LREAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|USINT|UINT|UDINT|ULINT|VOID|WORD|WSTRING|TON_TIME|TOF_TIME|TP_TIME|IEC_TIMER)\\b",
+					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|SINT|SINT|INT|DINT|LINT|DTL|DT|DWORD|POINTER|REAL|LREAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|USINT|UINT|UDINT|ULINT|VOID|WORD|WSTRING|TON_TIME|TOF_TIME|TP_TIME|IEC_TIMER|ENO)\\b",
 					"name": "support.class.scl"
 				},
 				{
@@ -144,6 +144,26 @@
 				},
 				{
 					"match": "(?i)\\b(S7_)\\w+",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(ExternalAccessible)",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(ExternalVisible)",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(ExternalWritable)",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(LibVersion)",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(InstructionName)",
 					"name": "support.variable.scl"
 				},
 				{
@@ -241,6 +261,22 @@
 				{
 					"match":"(?i)\\b(dword_bcd_to_dint)\\b",
 					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(VAL_STRG)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(STRG_VAL)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(S_CONV)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(CONCAT)\\b",
+					"name":"support.function.scl"
 				}
 			]
 		},
@@ -269,6 +305,10 @@
 				{
 					"match": "(?i)\\bfalse\\b",
 					"name": "constant.language.boolean.false.scl"					
+				},
+				{
+					"match": "(?i)\\bnull\\b",
+					"name": "constant.language.null.scl"					
 				}
 			]
 		},
