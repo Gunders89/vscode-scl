@@ -1,430 +1,321 @@
 {
-    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "Siemens SCL",
-    "patterns": [
-        {
-            "include": "#comments"
-        },
-        {
-            "include": "#section"
-        },
-        {
-            "include": "#keywords"
-        },
-        {
-            "include": "#strings"
-        },
-        {
-            "include": "#operators"
-        },
-        {
-            "include": "#storage"
-        },
-        {
-            "include": "#constants"
-        },
-        {
-            "include": "#support"
-        },
-        {
-            "include": "#punctuations"
-        }
-    ],
-    "repository": {
-        "keywords": {
-            "patterns": [
-                {
-                    "name": "keyword.control.scl",
-                    "match": "(?i)\\b(break|case|end_case|continue|do|to|else|elsif|AT|for|end_for|goto|if|end_if|return|of|while|end_while|then|repeat|until|end_repeat|exit|label|end_label|REGION|END_REGION)\\b"
-                },
-                {
-                    "name": "keyword.control.scl",
-                    "match": "(?i)\\b(var[\\s\\r\\n]+constant|var|var_input|var_output|var_in_out|var_temp|end_var|begin|const|end_const|type|end_type)\\b"
-                },
-                {
-                    "name": "keyword.control.scl",
-                    "match": "(?i)\\b(mod|div)\\b"
-                }
-            ]
-        },
-        "operators": {
-            "patterns": [
-                {
-                    "name": "keyword.control.scl",
-                    "match": "!|\\$|\\&|<\\=|>\\=|<>|<|>|(\\*\\*)|(\\=\\=)|!|\\&\\&|\\*|\\/|\\-|\\+|:|\\=|\\b(void)\\b"
-                },
-                {
-                    "name": "keyword.control.assignment.scl",
-                    "match": "\\:\\="
-                },
-                {
-                    "name": "keyword.control.scl",
-                    "match": "(?i)\\b(and|or|xor|not)\\b"
-                },
-                {
-                    "name": "constant.regexp.scl",
-                    "match": "\\#.\\w*(?!\\()\\b[.]\\w.*?\\b|\\#\\D.\\w*(?!\\()\\b|\\.\\w*|\\.\\w*"
-                },
-                {
-                    "name": "constant.regexp.scl",
-                    "match": "(^ (\\s*\\w*?) (?=:))|(^(\\s*\\w*?) )(?={)"
-                }
-            ]
-        },
-        "storage": {
-            "patterns": [
-                {
-                    "captures": {
-                        "1": {
-                            "name": "storage.type.function.scl"
-                        },
-                        "2": {
-                            "name": "entity.name.function.scl"
-                        },
-                        "3": {
-                            "name": "entity.name.function.scl"
-                        },
-                        "7": {
-                            "patterns": [
-                                {
-                                    "include": "#operators"
-                                }
-                            ]
-                        },
-                        "9": {
-                            "patterns": [
-                                {
-                                    "include": "#support"
-                                }
-                            ]
-                        }
-                    },
-                    "match": "(?i)\\b(function)\\s+(\"(\\w*)\")((|\\s*)((\\:)(\\s*|)(\\w*)(\\s))|)",
-                    "name": "storage.type.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(END_FUNCTION)\\b",
-                    "name": "storage.type.function.scl"
-                },
-                {
-                    "captures": {
-                        "1": {
-                            "name": "storage.type.function.scl"
-                        },
-                        "2": {
-                            "name": "entity.name.function.scl"
-                        },
-                        "3": {
-                            "name": "entity.name.function.scl"
-                        }
-                    },
-                    "match": "(?i)\\b(function_block)\\s+(\"(\\w*)\")?",
-                    "name": "storage.type.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(END_FUNCTION_BLOCK)\\b",
-                    "name": "storage.type.function.scl"
-                },
-                {
-                    "match": "(\"(\\w+?)\")|\\#.*\\[\\d\\]|\\#\\w*(?=\\()",
-                    "name": "entity.name.function.scl"
-                },
-                {
-                    "captures": {
-                        "1": {
-                            "name": "storage.type.function.scl"
-                        },
-                        "2": {
-                            "name": "entity.name.function.scl"
-                        },
-                        "3": {
-                            "name": "entity.name.function.scl"
-                        }
-                    },
-                    "match": "(?i)\\b(data_block)\\s+(\"(\\w*)\")?",
-                    "name": "storage.type.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(END_DATA_BLOCK)\\b",
-                    "name": "storage.type.function.scl"
-                },
-                {
-                    "match": "(\"(\\w+?)\")|\\#.*\\[\\d\\]|\\#\\w*(?=\\()",
-                    "name": "entity.name.function.scl"
-                }
-            ]
-        },
-        "support": {
-            "patterns": [
-                {
-                    "match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|SINT|SINT|INT|DINT|LINT|DT|DWORD|POINTER|REAL|LREAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|USINT|UINT|UDINT|ULINT|VOID|WORD|WSTRING|TON_TIME|TOF_TIME|TP_TIME)\\b",
-                    "name": "support.class.scl"
-                },
-                {
-                    "match": "(?i)\\b(STRUCT|END_STRUCT)\\b",
-                    "name": "support.type.scl"
-                },
-                {
-                    "match": "(?i)\\b(ABS|SQR|SQRT|EXP|EXPD|LN|LOG|ACOS|ASIN|ATAN|COS|SIN|TAN)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(ROL|ROR|SHL|SHR)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(SEL|MAX|MIN|LIMIT|MUX)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(ROUND|TRUNC)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(S7_)\\w+",
-                    "name": "support.variable.scl"
-                },
-                {
-                    "match": "(?i)(externalaccessible)",
-                    "name": "support.variable.scl"
-                },
-                {
-                    "match": "(?i)(externalvisible)",
-                    "name": "support.variable.scl"
-                },
-                {
-                    "match": "(?i)(externalwritable)",
-                    "name": "support.variable.scl"
-                },
-                {
-                    "match": "(?i)(instructionname)",
-                    "name": "support.variable.scl"
-                },
-                {
-                    "match": "(?i)(LibVersion)",
-                    "name": "support.variable.scl"
-                },
-                {
-                    "match": "(?i)\\b(TIME_TCK)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(bool_to_byte|bool_to_dword|bool_to_word|bool_to_int|bool_to_dint)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(byte_to_bool|byte_to_char|byte_to_dword|byte_to_int|byte_to_dint|byte_to_word)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(char_to_byte|char_to_int|char_to_string|char_to_wstring)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(date_to_dint)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(dint_to_bool|dint_to_byte|dint_to_word|dint_to_dword|dint_to_lword|dint_to_sint|dint_to_usint|dint_to_int|dint_to_uint|dint_to_udint|dint_to_ulint|dint_to_real|dint_to_lreal|dint_to_time|dint_to_ltime|dint_to_ldt|dint_to_tod|dint_to_ltod|dint_to_date|dint_to_string|dint_to_wstring|dint_to_char|dint_to_wchar|dint_to_bcd32|dint_to_bcd32_dword)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(udint_to_bool|udint_to_byte|udint_to_word|udint_to_dword|udint_to_lword|udint_to_sint|udint_to_usint|udint_to_int|udint_to_uint|udint_to_dint|udint_to_ulint|udint_to_real|udint_to_lreal|udint_to_time|udint_to_ltime|udint_to_ldt|udint_to_tod|udint_to_ltod|udint_to_date|udint_to_string|udint_to_wstring|udint_to_char|udint_to_wchar|udint_to_bcd32|udint_to_bcd32_dword)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(dword_to_bool|dword_to_byte|dword_to_dint|dword_to_real|dword_to_word|dword_to_int)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(sint_to_bool|sint_to_byte|sint_to_word|sint_to_dword|sint_to_lword|sint_to_usint|sint_to_int|sint_to_uint|sint_to_dint|sint_to_udint|sint_to_ulint|sint_to_real|sint_to_lreal|sint_to_time|sint_to_ltime|sint_to_ldt|sint_to_tod|sint_to_ltod|sint_to_date|sint_to_string|sint_to_wstring|sint_to_char|sint_to_wchar)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(usint_to_bool|usint_to_byte|usint_to_word|usint_to_dword|usint_to_lword|usint_to_sint|usint_to_int|usint_to_uint|usint_to_dint|usint_to_udint|usint_to_ulint|usint_to_real|usint_to_lreal|usint_to_time|usint_to_ltime|usint_to_ldt|usint_to_tod|usint_to_ltod|usint_to_date|usint_to_string|usint_to_wstring|usint_to_char|usint_to_wchar)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(int_to_bool|int_to_byte|int_to_word|int_to_dword|int_to_lword|int_to_sint|int_to_usint|int_to_uint|int_to_dint|int_to_udint|int_to_ulint|int_to_real|int_to_lreal|int_to_time|int_to_ltime|int_to_ldt|int_to_tod|int_to_ltod|int_to_date|int_to_string|int_to_wstring|int_to_char|int_to_wchar)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(uint_to_bool|uint_to_byte|uint_to_word|uint_to_dword|uint_to_lword|uint_to_sint|uint_to_usint|uint_to_int|uint_to_dint|uint_to_udint|uint_to_ulint|uint_to_real|uint_to_lreal|uint_to_time|uint_to_ltime|uint_to_ldt|uint_to_tod|uint_to_ltod|uint_to_date|uint_to_string|uint_to_wstring|uint_to_char|uint_to_wchar)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(lint_to_bool|lint_to_byte|lint_to_word|lint_to_dword|lint_to_lword|lint_to_sint|lint_to_usint|lint_to_int|lint_to_uint|lint_to_dint|lint_to_udint|lint_to_ulint|lint_to_real|lint_to_lreal|lint_to_time|lint_to_ltime|lint_to_ldt|lint_to_tod|lint_to_date|lint_to_string|lint_to_wstring|lint_to_char|lint_to_wchar)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(real_to_dword|real_to_sint|real_to_usint|real_to_int|real_to_uint|real_to_dint|real_to_udint|real_to_lint|real_to_ulint|real_to_lreal|real_to_string|real_to_wstring)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(lreal_to_lword|lreal_to_sint|lreal_to_usint|lreal_to_int|lreal_to_uint|lreal_to_dint|lreal_to_udint|lreal_to_ulint|lreal_to_real|lreal_to_lreal|lreal_to_string|lreal_to_wstring)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(string_to_char|string_to_wchar|string_to_int|string_to_lint|string_to_uint|string_to_usint|string_to_dint|string_to_udint|string_to_real|string_lreal|string_to_wstring)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(wstring_to_char|wstring_to_wchar|wstring_to_int|wstring_to_lint|wstring_to_uint|wstring_to_usint|wstring_to_dint|wstring_to_udint|wstring_to_real|wstring_to_lreal|wstring_to_sint|wstring_to_string)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(time_to_dint)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(tod_to_dint)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(word_to_bool|word_to_byte|word_to_int|word_to_dint|word_to_dword|word_to_block_db)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(block_db_to_word)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(bcd_to_int|bcd_to_dint)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(word_bcd_to_int)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(dword_bcd_to_dint)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(concat)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(upper_bound)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(lower_bound)\\b",
-                    "name": "support.function.scl"
-                },
-                {
-                    "match": "(?i)\\b(len)\\b",
-                    "name": "support.function.scl"
-                }
-            ]
-        },
-        "constants": {
-            "patterns": [
-                {
-                    "match": "\\b(t|T|TIME)#(((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?d)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?h)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?m)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?s)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?ms)?)\\b",
-                    "name": "constant.numeric.scl"
-                },
-                {
-                    "match": "\\b(16)#[0-9A-F]([0-9A-F]|\\_)+\\b",
-                    "name": "constant.numeric.scl"
-                },
-                {
-                    "match": "\\b(2)#[0-1]([0-1]|\\_)+\\b",
-                    "name": "constant.numeric.scl"
-                },
-                {
-                    "match": "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b",
-                    "name": "constant.numeric.scl"
-                },
-                {
-                    "match": "(?i)\\btrue\\b",
-                    "name": "constant.language.boolean.true.scl"
-                },
-                {
-                    "match": "(?i)\\bfalse\\b",
-                    "name": "constant.language.boolean.false.scl"
-                },
-                {
-                    "match": "(?i)\\bnull\\b",
-                    "name": "constant.language.null"
-                }
-            ]
-        },
-        "punctuations": {
-            "patterns": [
-                {
-                    "match": "\\;",
-                    "name": "punctuation.terminator.statement.scl"
-                }
-            ]
-        },
-        "comments": {
-            "patterns": [
-                {
-                    "captures": {
-                        "0": {
-                            "name": "punctuation.definition.comment.scl"
-                        }
-                    },
-                    "begin": "\\(\\*",
-                    "end": "\\*\\)",
-                    "name": "comment.block.scl"
-                },
-                {
-                    "captures": {
-                        "1": {
-                            "name": "punctuation.definition.comment.scl"
-                        }
-                    },
-                    "match": "(//).*$\\n?",
-                    "name": "comment.line.double-slash.scl"
-                },
-                {
-                    "captures": {
-                        "2": {
-                            "name": "punctuation.definition.comment.scl"
-                        }
-                    },
-                    "begin": "\\(/\\*",
-                    "end": "\\*/\\)",
-                    "name": "comment.multilangblock.scl"
-                }
-            ]
-        },
-        "section": {
-            "patterns": [
-                {
-                    "captures": {
-                        "1": {
-                            "name": "keyword.other.region.scl"
-                        },
-                        "2": {
-                            "name": "string.unquoted.scl"
-                        }
-                    },
-                    "match": "(?i)\\b(region)\\b(.*)$\\n?"
-                },
-                {
-                    "captures": {
-                        "1": {
-                            "name": "keyword.other.endregion.scl"
-                        },
-                        "2": {
-                            "name": "string.unquoted.scl"
-                        }
-                    },
-                    "match": "(?i)\\b(end_region)\\b(.*)$\\n?"
-                }
-            ]
-        },
-        "strings": {
-            "patterns": [
-                {
-                    "name": "constant.character.escape.scl",
-                    "match": "'[^'\\$]*(?:\\$[\\s\\S][^'\\$]*)*'"
-                }
-            ]
-        }
-    },
-    "scopeName": "source.scl"
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Siemens SCL",
+	"patterns": [
+		{ "include": "#comments"},
+		{ "include": "#section" },
+		{ "include": "#keywords" },
+		{ "include": "#strings" },
+		{ "include": "#operators" },
+		{ "include": "#storage"	},
+		{ "include": "#constants" },
+		{ "include": "#support"	},
+		{ "include": "#punctuations" }
+
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.scl",
+					"match": "(?i)\\b(break|case|end_case|continue|do|to|else|elsif|AT|for|end_for|goto|if|end_if|return|of|while|end_while|then|repeat|until|end_repeat|exit|label|end_label|REGION|END_REGION)\\b"
+				},
+				{
+					"name": "keyword.control.scl",
+					"match": "(?i)\\b(var[\\s\\r\\n]+constant|var|var_input|var_output|var_in_out|var_temp|end_var|begin|const|end_const|type|end_type)\\b"			
+				},
+				{
+					"name": "keyword.control.scl",
+					"match": "(?i)\\b(mod|div)\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.control.scl",
+					"match": "!|\\$|\\&|<\\=|>\\=|<>|<|>|(\\*\\*)|(\\=\\=)|!|\\&\\&|\\*|\\/|\\-|\\+|:|\\=|\\#|\\b(void)\\b"
+				},
+				{
+					"name": "keyword.control.assignment.scl",
+					"match": "\\:\\="
+				},
+				{
+					"name": "keyword.control.scl",
+					"match": "(?i)\\b(and|or|xor|not)\\b"
+				}
+			]
+
+		},
+						
+		"storage": {
+			"patterns": [
+				{
+					"captures": {
+						"1": { "name": "storage.type.function.scl"},
+						"2": { "name": "entity.name.function.scl"},
+						"3": { "name": "entity.name.function.scl"},
+						"7": { 
+							"patterns": [
+								{
+									"include": "#operators"
+								}
+							]
+						},
+						"9": { 	
+							"patterns": [
+								{
+									"include": "#support"
+								}
+							]
+						}
+					},
+					"match": "(?i)\\b(function)\\s+(\"(\\w*)\")((|\\s*)((\\:)(\\s*|)(\\w*)(\\s))|)",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"match": "(?i)\\b(END_FUNCTION)\\b",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"captures": {
+						"1": { "name": "storage.type.function.scl"},
+						"2": { "name": "entity.name.function.scl"},
+						"3": { "name": "entity.name.function.scl"}
+					},
+					"match": "(?i)\\b(function_block)\\s+(\"(\\w*)\")?",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"match": "(?i)\\b(END_FUNCTION_BLOCK)\\b",
+					"name": "storage.type.function.scl"
+				},
+				{
+					"match": "(\"(\\w+?)\")",
+					"name": "entity.name.function.scl"					
+				}
+			]	
+		},
+		"support":{
+			"patterns": [
+				{
+					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|SINT|SINT|INT|DINT|LINT|DT|DWORD|POINTER|REAL|LREAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|USINT|UINT|UDINT|ULINT|VOID|WORD|WSTRING)\\b",
+					"name": "support.class.scl"
+				},
+				{
+					"match": "(?i)\\b(STRUCT|END_STRUCT)\\b",
+					"name": "support.type.scl"
+				},
+				{
+					"match": "(?i)\\b(ABS|SQR|SQRT|EXP|EXPD|LN|LOG|ACOS|ASIN|ATAN|COS|SIN|TAN)\\b",
+					"name": "support.function.scl"
+				},
+				{
+					"match": "(?i)\\b(ROL|ROR|SHL|SHR)\\b",
+					"name": "support.function.scl"
+				},
+				{
+					"match": "(?i)\\b(SEL|MAX|MIN|LIMIT|MUX)\\b",
+					"name": "support.function.scl"
+				},
+				{
+					"match": "(?i)\\b(ROUND|TRUNC)\\b",
+					"name": "support.function.scl"
+				},
+				{
+					"match": "(?i)\\b(S7_)\\w+",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(TIME_TCK)\\b",
+					"name": "support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(bool_to_byte|bool_to_dword|bool_to_word|bool_to_int|bool_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(byte_to_bool|byte_to_char|byte_to_dword|byte_to_int|byte_to_dint|byte_to_word)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(char_to_byte|char_to_int|char_to_string|char_to_wstring)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(date_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(dint_to_bool|dint_to_byte|dint_to_word|dint_to_dword|dint_to_lword|dint_to_sint|dint_to_usint|dint_to_int|dint_to_uint|dint_to_udint|dint_to_ulint|dint_to_real|dint_to_lreal|dint_to_time|dint_to_ltime|dint_to_ldt|dint_to_tod|dint_to_ltod|dint_to_date|dint_to_string|dint_to_wstring|dint_to_char|dint_to_wchar|dint_to_bcd32|dint_to_bcd32_dword)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(udint_to_bool|udint_to_byte|udint_to_word|udint_to_dword|udint_to_lword|udint_to_sint|udint_to_usint|udint_to_int|udint_to_uint|udint_to_dint|udint_to_ulint|udint_to_real|udint_to_lreal|udint_to_time|udint_to_ltime|udint_to_ldt|udint_to_tod|udint_to_ltod|udint_to_date|udint_to_string|udint_to_wstring|udint_to_char|udint_to_wchar|udint_to_bcd32|udint_to_bcd32_dword)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(dword_to_bool|dword_to_byte|dword_to_dint|dword_to_real|dword_to_word|dword_to_int)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(sint_to_bool|sint_to_byte|sint_to_word|sint_to_dword|sint_to_lword|sint_to_usint|sint_to_int|sint_to_uint|sint_to_dint|sint_to_udint|sint_to_ulint|sint_to_real|sint_to_lreal|sint_to_time|sint_to_ltime|sint_to_ldt|sint_to_tod|sint_to_ltod|sint_to_date|sint_to_string|sint_to_wstring|sint_to_char|sint_to_wchar)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(usint_to_bool|usint_to_byte|usint_to_word|usint_to_dword|usint_to_lword|usint_to_sint|usint_to_int|usint_to_uint|usint_to_dint|usint_to_udint|usint_to_ulint|usint_to_real|usint_to_lreal|usint_to_time|usint_to_ltime|usint_to_ldt|usint_to_tod|usint_to_ltod|usint_to_date|usint_to_string|usint_to_wstring|usint_to_char|usint_to_wchar)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(int_to_bool|int_to_byte|int_to_word|int_to_dword|int_to_lword|int_to_sint|int_to_usint|int_to_uint|int_to_dint|int_to_udint|int_to_ulint|int_to_real|int_to_lreal|int_to_time|int_to_ltime|int_to_ldt|int_to_tod|int_to_ltod|int_to_date|int_to_string|int_to_wstring|int_to_char|int_to_wchar)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(uint_to_bool|uint_to_byte|uint_to_word|uint_to_dword|uint_to_lword|uint_to_sint|uint_to_usint|uint_to_int|uint_to_dint|uint_to_udint|uint_to_ulint|uint_to_real|uint_to_lreal|uint_to_time|uint_to_ltime|uint_to_ldt|uint_to_tod|uint_to_ltod|uint_to_date|uint_to_string|uint_to_wstring|uint_to_char|uint_to_wchar)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(lint_to_bool|lint_to_byte|lint_to_word|lint_to_dword|lint_to_lword|lint_to_sint|lint_to_usint|lint_to_int|lint_to_uint|lint_to_dint|lint_to_udint|lint_to_ulint|lint_to_real|lint_to_lreal|lint_to_time|lint_to_ltime|lint_to_ldt|lint_to_tod|lint_to_date|lint_to_string|lint_to_wstring|lint_to_char|lint_to_wchar)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(real_to_dword|real_to_sint|real_to_usint|real_to_int|real_to_uint|real_to_dint|real_to_udint|real_to_lint|real_to_ulint|real_to_lreal|real_to_string|real_to_wstring)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(lreal_to_lword|lreal_to_sint|lreal_to_usint|lreal_to_int|lreal_to_uint|lreal_to_dint|lreal_to_udint|lreal_to_ulint|lreal_to_real|lreal_to_lreal|lreal_to_string|lreal_to_wstring)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(string_to_char|string_to_wchar|string_to_int|string_to_lint|string_to_uint|string_to_usint|string_to_dint|string_to_udint|string_to_real|string_lreal|string_to_wstring)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(wstring_to_char|wstring_to_wchar|wstring_to_int|wstring_to_lint|wstring_to_uint|wstring_to_usint|wstring_to_dint|wstring_to_udint|wstring_to_real|wstring_to_lreal|wstring_to_sint|wstring_to_string)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(time_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(tod_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(word_to_bool|word_to_byte|word_to_int|word_to_dint|word_to_dword|word_to_block_db)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(block_db_to_word)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(bcd_to_int|bcd_to_dint)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(word_bcd_to_int)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(dword_bcd_to_dint)\\b",
+					"name":"support.function.scl"
+				}
+			]
+		},
+		"constants":{
+			"patterns": [
+				{
+					"match": "\\b(t|T|TIME)#(((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?d)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?h)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?m)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?s)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?ms)?)\\b",	
+					"name": "constant.numeric.scl"					
+				},
+				{
+					"match": "\\b(16)#[0-9A-F]([0-9A-F]|\\_)+\\b",
+					"name": "constant.numeric.scl"					
+				},
+				{
+					"match": "\\b(2)#[0-1]([0-1]|\\_)+\\b",
+					"name": "constant.numeric.scl"					
+				},
+				{
+					"match": "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b",
+					"name": "constant.numeric.scl"					
+				},
+				{
+					"match": "(?i)\\btrue\\b",
+					"name": "constant.language.boolean.true.scl"					
+				},
+				{
+					"match": "(?i)\\bfalse\\b",
+					"name": "constant.language.boolean.false.scl"					
+				}
+			]
+		},
+		"punctuations":{
+			"patterns": [
+				{
+					"match": "\\;",
+					"name": "punctuation.terminator.statement.scl"	
+				}
+			]
+		},
+		"comments":{
+			"patterns": [
+				{
+					"captures": {
+						"0": { "name": "punctuation.definition.comment.scl"}
+					},
+					"begin": "\\(\\*",
+					"end": "\\*\\)",
+					"name": "comment.block.scl"
+				},
+				{
+					"captures": {
+						"1": { "name": "punctuation.definition.comment.scl"}
+					},
+					"match": "(//).*$\\n?",
+					"name": "comment.line.double-slash.scl"
+				},
+				{
+					"captures": {
+						"2": { "name": "punctuation.definition.comment.scl"}
+					},
+					"begin": "\\(\/\\*",
+					"end": "\\*\/\\)",
+					"name": "comment.multilangblock.scl"
+				}
+			]
+		},
+		"section":{
+			"patterns":[
+				{
+					"captures": {
+						"1": { "name": "keyword.other.region.scl"},
+						"2": { "name": "string.unquoted.scl"}
+					},
+					"match": "(?i)\\b(region)\\b(.*)$\\n?"
+				},
+				{
+					"captures": {
+						"1": { "name": "keyword.other.endregion.scl"},
+						"2": { "name": "string.unquoted.scl"}
+					},
+					"match": "(?i)\\b(end_region)\\b(.*)$\\n?"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.single.scl",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.scl",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.scl"
 }
