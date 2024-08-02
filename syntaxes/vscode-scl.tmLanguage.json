@@ -143,7 +143,27 @@
 					"name": "support.function.scl"
 				},
 				{
-					"match": "(?i)\\b(S7_)\\w+|ExternalAccessible|ExternalVisible|ExternalWritable|LibVersion|InstructionName",
+					"match": "(?i)\\b(S7_)\\w+",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(ExternalAccessible)",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(ExternalVisible)",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(ExternalWritable)",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(LibVersion)",
+					"name": "support.variable.scl"
+				},
+				{
+					"match": "(?i)\\b(InstructionName)",
 					"name": "support.variable.scl"
 				},
 				{
