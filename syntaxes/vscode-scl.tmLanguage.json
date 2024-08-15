@@ -119,7 +119,7 @@
 		"support":{
 			"patterns": [
 				{
-					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|SINT|SINT|INT|DINT|LINT|DTL|DT|DWORD|POINTER|REAL|LREAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|USINT|UINT|UDINT|ULINT|VOID|WORD|WSTRING|TON_TIME|TOF_TIME|TP_TIME|IEC_TIMER|ENO)\\b",
+					"match": "(?i)\\b(ANY|ARRAY|BOOL|BYTE|CHAR|COUNTER|DATE|DATE_AND_TIME|SINT|SINT|INT|DINT|LINT|DTL|DT|DWORD|POINTER|REAL|LREAL|S5TIME|STRING|TIME|TIMER|TIME_OF_DAY|TOD|USINT|UINT|UDINT|ULINT|VOID|WORD|WSTRING|TON_TIME|TOF_TIME|TP_TIME|IEC_TIMER|ENO|REF_TO|VARIANT)\\b",
 					"name": "support.class.scl"
 				},
 				{
@@ -277,13 +277,25 @@
 				{
 					"match":"(?i)\\b(CONCAT)\\b",
 					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(LOWER_BOUND)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(UPPER_BOUND)\\b",
+					"name":"support.function.scl"
+				},
+				{
+					"match":"(?i)\\b(REF)\\b",
+					"name":"support.function.scl"
 				}
 			]
 		},
 		"constants":{
 			"patterns": [
 				{
-					"match": "\\b(t|T|TIME)#(((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?d)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?h)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?m)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?s)?((([-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)|\\d+)?ms)?)\\b",	
+					"match": "\\b(S5TIME|S5T|TIME|LTIME|T|LT|D|TOD|LTOD|DT|DTL|LDT)#[0-9|+|-]*([^(\\s|;)]+)",	
 					"name": "constant.numeric.scl"					
 				},
 				{
