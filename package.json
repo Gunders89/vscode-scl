@@ -8,6 +8,10 @@
     "engines": {
         "vscode": "^1.20.0"
     },
+    "main": "./extension.js",
+    "activationEvents": [
+        "onLanguage:siemensscl"
+    ],
     "categories": [
         "Programming Languages"
     ],
