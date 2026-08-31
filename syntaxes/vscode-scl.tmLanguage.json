@@ -57,6 +57,14 @@
 		},
 		"storage": {
 			"patterns": [
+        {
+            "match": "(?i)\\b(FUNCTION)\\b",
+            "name": "storage.type.function.scl"
+        },
+        {
+            "match": "(?i)\\b(ORGANIZATION_BLOCK)\\b",
+            "name": "storage.type.function.scl"
+        },
 				{
 					"captures": {
 						"1": { "name": "storage.type.function.scl"},
@@ -97,6 +105,10 @@
 					"match": "(?i)\\b(END_FUNCTION_BLOCK)\\b",
 					"name": "storage.type.function.scl"
 				},
+        {
+          "match": "(?i)\\b(END_ORGANIZATION_BLOCK)\\b",
+          "name": "storage.type.function.scl"
+        },
 				{
 					"match": "(\"(\\w+?)\")|\\#.*\\[\\d\\]|\\#\\w*(?=\\()",
 					"name": "entity.name.function.scl"					
